@@ -28,24 +28,23 @@ const getUsuarioById = async (req, res) => {
     });
 }
 
-const putUsuarios = async (req, res = response) =>{
+const putUsuarios = async (req, res = response) => {
     const { id } = req.params;
-    const {_id, password, google, correo, ...resto } = req.body;
+    const { _id, password, correo, ...resto } = req.body;
 
-    if(password){
+    if (password) {
         const salt = bcryptjs.genSaltSync();
         resto.password = bcryptjs.hashSync(password, salt);
     }
 
-    await Usuario.findByIdAndUpdate(id, resto);
-
-    const usuario = Usuario.findOne({id});
+    const usuario = await Usuario.findByIdAndUpdate(id, resto);
 
     res.status(200).json({
         msg: 'Usuario Actualizado Exitosamente!!!',
         usuario
     });
 }
+
 
 const usuariosDelete = async (req, res) => {
     const {id} = req.params;
