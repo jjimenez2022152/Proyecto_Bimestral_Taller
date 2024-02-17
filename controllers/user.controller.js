@@ -17,7 +17,7 @@ const usuariosGet = async (req, res = response) => {
         total,
         usuarios
     });
-}
+};
 
 const getUsuarioById = async (req, res) => {
     const {id} = req.params;
