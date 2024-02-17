@@ -43,7 +43,7 @@ const putUsuarios = async (req, res = response) => {
         msg: 'Usuario Actualizado Exitosamente!!!',
         usuario
     });
-}
+};
 
 
 const usuariosDelete = async (req, res) => {
