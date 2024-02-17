@@ -26,7 +26,7 @@ const getUsuarioById = async (req, res) => {
     res.status(200).json({
         usuario
     });
-}
+};
 
 const putUsuarios = async (req, res = response) => {
     const { id } = req.params;
