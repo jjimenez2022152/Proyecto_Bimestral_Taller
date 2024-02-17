@@ -69,7 +69,7 @@ const usuariosPost = async (req, res) => {
     res.status(202).json({
         usuario
     });
-}
+};
 
 module.exports = {
     usuariosPost,
