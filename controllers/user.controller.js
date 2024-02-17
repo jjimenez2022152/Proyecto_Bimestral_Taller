@@ -56,7 +56,7 @@ const usuariosDelete = async (req, res) => {
         usuario,
         usuarioAutenticado
     });
-}
+};
 
 const usuariosPost = async (req, res) => {
     const {nombre, correo, password, role} = req.body;
