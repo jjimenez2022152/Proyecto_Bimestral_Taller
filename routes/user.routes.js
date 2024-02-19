@@ -3,6 +3,8 @@ const { check } = require('express-validator');
 
 const { validarCampos } = require('../middlewares/validar-campos');
 
+const { validarJWT } = require('../middlewares/validar-jwt');
+const { esAdminRole, tieneRolAutorizado } = require('../middlewares/validar-roles');
 
 const { 
     usuariosPost,
@@ -11,7 +13,7 @@ const {
     putUsuarios,
     usuariosDelete} = require('../controllers/user.controller');
 
-const { existenteEmail, /*esRoleValido*/ existeUsuarioById } = require('../helpers/db-validators');
+const { existenteEmail, esRoleValido, existeUsuarioById } = require('../helpers/db-validators');
 
 const router = Router();
 
@@ -30,7 +32,7 @@ router.put(
     [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeUsuarioById),
-        //check("role").custom(esRoleValido),
+        check("role").custom(esRoleValido),
         validarCampos
     ], putUsuarios);
 
@@ -41,16 +43,16 @@ router.post(
         check("password","El password debe ser mayor a 6 caracteres").isLength({min:6}),
         check("correo","Este no es un correo válido").isEmail(),
         check("correo").custom(existenteEmail),
-        //check("role").custom(esRoleValido),
+        check("role").custom(esRoleValido),
         validarCampos,
     ], usuariosPost);
 
 router.delete(
     "/:id",
     [   
-        //validarJWT,
-        //esAdminRole,
-        //tieneRolAutorizado('ADMIN_ROLE','SUPER_ROLE'),
+        validarJWT,
+        esAdminRole,
+        tieneRolAutorizado('ADMIN_ROLE','SUPER_ROLE'),
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeUsuarioById),
         validarCampos
