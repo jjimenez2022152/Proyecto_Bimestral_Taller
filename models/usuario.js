@@ -14,15 +14,21 @@ const UsuarioSchema = Schema({
         type: String,
         required: [true, 'La contraseña es obligatoria']
     },
-    
+    img:{
+        type: String
+    },
     role:{
         type: String,
         require: true,
-        default: "ADMIN_ROLE"
+        enum: ["ADMIN_ROLE", "CLIENT_ROLE"]
     },
     estado:{
         type: Boolean,
         default: true
+    },
+    google:{
+        type: Boolean,
+        default: false
     }
 });
 
