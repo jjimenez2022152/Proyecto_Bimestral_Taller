@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "userCollection",
+    "dateExported": "2024-02-24T07:13:40.095Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f9542150-928a-4594-9a18-9a8982870007",
+            "colId": "b63231b2-1b1a-45c8-b578-4b9cfcab4c3e",
+            "containerId": "",
+            "name": "userPost",
+            "url": "http://localhost:3000/coffeApi/v1/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-24T06:57:29.295Z",
+            "modified": "2024-02-24T07:08:11.007Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"UserElimando\",\n  \"correo\": \"UserEliminado@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"USER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dc2ac031-1a5c-4a3a-bacc-cddfd9039144",
+            "colId": "b63231b2-1b1a-45c8-b578-4b9cfcab4c3e",
+            "containerId": "",
+            "name": "userGet",
+            "url": "http://localhost:3000/coffeApi/v1/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-24T07:04:02.268Z",
+            "modified": "2024-02-24T07:05:43.924Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c3149d25-8b85-47af-8899-d6207fb2014c",
+            "colId": "b63231b2-1b1a-45c8-b578-4b9cfcab4c3e",
+            "containerId": "",
+            "name": "userGetById",
+            "url": "http://localhost:3000/coffeApi/v1/users/65d995da981f588769e92845",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-24T07:06:11.089Z",
+            "modified": "2024-02-24T07:09:00.762Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b4fe0c08-341d-4807-aa06-1959dfdd8172",
+            "colId": "b63231b2-1b1a-45c8-b578-4b9cfcab4c3e",
+            "containerId": "",
+            "name": "userPut",
+            "url": "http://localhost:3000/coffeApi/v1/users/65d99451981f588769e92814",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-24T07:07:18.633Z",
+            "modified": "2024-02-24T07:07:43.182Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"User5Actualizado\",\n  \"correo\": \"User5@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"USER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "43fa63ec-ca90-423f-ac63-66c100bf53d0",
+            "colId": "b63231b2-1b1a-45c8-b578-4b9cfcab4c3e",
+            "containerId": "",
+            "name": "userDelete",
+            "url": "http://localhost:3000/coffeApi/v1/users/65d995da981f588769e92845",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-24T07:08:45.576Z",
+            "modified": "2024-02-24T07:09:08.241Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
