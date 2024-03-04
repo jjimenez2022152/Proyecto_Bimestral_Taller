@@ -7,7 +7,8 @@ import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js'
-import User from "../src/users/user.model.js"
+import User from "../src/users/user.model.js";
+import bcryptjs from 'bcryptjs';
 
 class Server {
     constructor() {
@@ -26,8 +27,11 @@ class Server {
         const lengthUsers = await User.countDocuments()
         if (lengthUsers > 0 ) return;
 
+        const salt = bcryptjs.genSaltSync();
+        const password = bcryptjs.hashSync('123456', salt);
+
         const adminUser = new User(
-            { nombre: "Alejandro", correo: "admin@email.com", password: "123456", role: "ADMIN_ROLE" }
+            { nombre: "Alejandro", correo: "admin@gmail.com", password, role: "ADMIN_ROLE" }
         )
 
         adminUser.save()

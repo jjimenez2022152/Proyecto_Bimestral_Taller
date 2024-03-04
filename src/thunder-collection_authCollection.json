@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-04T21:38:15.131Z",
+    "dateExported": "2024-03-04T23:15:22.015Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,15 +14,35 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-04T20:29:52.913Z",
-            "modified": "2024-03-04T21:36:38.506Z",
+            "modified": "2024-03-04T23:13:29.132Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\":\"Admin1@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "raw": "{\n  \"correo\":\"client1@gmail.com\",\n  \"password\":\"123456\"\n}",
                 "form": []
             },
             "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "394df335-f082-42e9-be32-630388c7ba53",
+            "colId": "f1fb0bd9-a88c-4697-ad9f-b52c77b926a3",
+            "containerId": "",
+            "name": "signUp",
+            "url": "http://localhost:8080/proyectoBim/v1/auth/signUp",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T23:05:18.585Z",
+            "modified": "2024-03-04T23:13:06.801Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Cliente 1\",\n  \"correo\": \"client1@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "reqType": "get",
             "tests": []
         }
     ]
