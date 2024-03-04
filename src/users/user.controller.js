@@ -21,12 +21,15 @@ export const usuariosGet = async (req = request, res = response) => {
 }
 
 export const usuariosPost = async (req, res) => {
+    const { nombre, correo, password, role } = req.body;
 
+    if (role !== 'ADMIN_ROLE' && role !== 'CLIENT_ROLE') {
+        return res.status(400).json({ error: "El rol debe ser 'ADMIN_ROLE' o 'USER_ROLE'." });
+    }
 
-    const {nombre, correo, password, role} = req.body;
-    const usuario = new User( {nombre, correo, password, role} );
+    const usuario = new User({ nombre, correo, password, role });
 
-    const salt = bcryptjs.genSaltSync(); 
+    const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
 
     await usuario.save();
@@ -34,7 +37,7 @@ export const usuariosPost = async (req, res) => {
     res.status(200).json({
         usuario
     });
-}
+};
 
 export const getUsuarioById = async (req, res) => {
     const {id} = req.params;

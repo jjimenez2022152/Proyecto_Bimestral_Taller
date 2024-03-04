@@ -9,7 +9,7 @@ import {
 } from "./user.controller.js";
 import {
   existenteEmail,
-  esRoleValido,
+  //checkRole,
   existeUsuarioById,
 } from "../helpers/db-validators.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
@@ -39,7 +39,8 @@ router.post(
     }),
     check("correo", "Este no es un correo válido").isEmail(),
     check("correo").custom(existenteEmail),
-    check("role").custom(esRoleValido),
+    check("role", "El role no puede estar vacio").not().isEmpty(),
+    //check("role").custom(checkRole), // Aplicar el middleware 'checkRoleMiddleware' para verificar si el rol existe en la base de datos
     validarCampos,
   ],
   usuariosPost
