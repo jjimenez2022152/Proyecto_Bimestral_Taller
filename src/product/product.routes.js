@@ -14,7 +14,7 @@ router.post(
     check("description", "La descripcion es obligatoria").not().isEmpty(),
     check("price", "El precio es de caracter obligatorio").not().isEmpty(),
     check("stock", "El stock es obligatorio").not().isEmpty(),
-    check("category", "La caregoria es obligatoria").not().isEmpty(),
+    check("categoryId", "La caregoria es obligatoria").not().isEmpty(),
     validarCampos, 
   ],
   productPost 
