@@ -7,6 +7,7 @@ import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js'
+import categoryRoutes from '../src/category/category.routes.js';
 import User from "../src/users/user.model.js";
 import bcryptjs from 'bcryptjs';
 
@@ -14,8 +15,9 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
-        this.usuarioPath = '/proyectoBim/v1/users'
-        this.authPath = '/proyectoBim/v1/auth'
+        this.usuarioPath = '/proyectoBim/v1/users';
+        this.authPath = '/proyectoBim/v1/auth';
+        this.categoryPath = 'proyectoBim/category';
 
         this.middlewares();
         this.conectarDB();
@@ -48,7 +50,8 @@ class Server {
 
     routes() {
         this.app.use(this.usuarioPath, userRoutes);
-        this.app.use(this.authPath, authRoutes)
+        this.app.use(this.authPath, authRoutes);
+        this.app.use(this.categoryPath, categoryRoutes);
     }
 
     listen() {

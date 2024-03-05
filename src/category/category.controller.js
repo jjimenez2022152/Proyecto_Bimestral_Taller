@@ -1,5 +1,6 @@
-import Category from '../models/category.model.js';
 import bcryptjs from 'bcryptjs';
+import Category from '../category/category.model.js';
+
 
 export const categoryPost = async (req, res) => {
     try {
