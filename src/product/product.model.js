@@ -21,7 +21,11 @@ const productSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',
         required: true
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+    },
 });
 
-export default mongoose.model('Product', productSchema );
+export default mongoose.model('products', productSchema);

@@ -3,8 +3,12 @@ import { check } from "express-validator";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 //import { tieneRole } from "../middlewares/validar-roles.js";
-import { productPost, productPut } from "./product.controller.js"; 
+import { productPost, productPut, productGet } from "./product.controller.js"; 
 const router = Router();
+
+
+router.get("/", validarJWT, productGet);
+
 
 router.post(
   "/", 

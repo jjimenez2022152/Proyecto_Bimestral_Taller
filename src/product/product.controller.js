@@ -3,6 +3,39 @@ import User from '../users/user.model.js';
 import bcryptjs from 'bcryptjs';
 import Product from '../product/product.model.js'
 
+
+export const productGet = async (req, res) => {
+    const { limite, desde } = req.query;
+    const query = { estado: true };
+
+    try {
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const [total, productos] = await Promise.all([
+            Product.countDocuments(query),
+            Product.find(query)
+                .populate('category')
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ]);
+
+        res.status(200).json({
+            total,
+            productos
+        });
+    } catch (error) {
+        console.error('Error al obtener productos:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
+
+
+
+
 export const productPost = async (req, res) => {
     try {
         const usuario = req.usuario;
@@ -18,7 +51,7 @@ export const productPost = async (req, res) => {
             description,
             price,
             stock,
-            category: categoryId 
+            category: categoryId
         });
 
         await nuevoProducto.save();
