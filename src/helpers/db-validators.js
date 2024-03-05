@@ -1,5 +1,8 @@
 import Role from '../roles/role.model.js';
-import User from '../users/user.model.js'
+import User from '../users/user.model.js';
+import Category from '../category/category.model.js';
+
+
 /*
 export const esRoleValido = async (role = '') => {
     const existeRol = await Role.findOne({role});
@@ -33,6 +36,13 @@ export const existenteEmail = async (correo = '') => {
         throw new Error(`El email ${correo} ya fue registrado`);
     }
 }
+
+export const existeNombreCategoria = async (name = '') => {
+    const existeCategoria = await Category.findOne({ name });
+    if (existeCategoria) {
+        throw new Error(`La categoría "${name}" ya existe.`);
+    }
+};
 
 export const existeUsuarioById = async (id = '') => {
     const existeUsuario = await User.findById(id);
