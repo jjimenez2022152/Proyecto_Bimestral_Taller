@@ -17,7 +17,7 @@ class Server {
         this.port = process.env.PORT;
         this.usuarioPath = '/proyectoBim/v1/users';
         this.authPath = '/proyectoBim/v1/auth';
-        this.categoryPath = 'proyectoBim/category';
+        this.categoryPath = '/proyectoBim/v1/category';
 
         this.middlewares();
         this.conectarDB();

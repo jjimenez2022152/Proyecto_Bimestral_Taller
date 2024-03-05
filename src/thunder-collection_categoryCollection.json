@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "categoryCollection",
+    "dateExported": "2024-03-05T06:24:35.885Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "33516ea0-f368-4da7-88c0-20a26d44ba0a",
+            "colId": "b7b40aa8-7e9e-400e-9246-79e3c815f1fb",
+            "containerId": "",
+            "name": "categoryPost",
+            "url": "http://localhost:8080/proyectoBim/v1/category",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-05T06:20:36.279Z",
+            "modified": "2024-03-05T06:23:44.058Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MTk4MDksImV4cCI6MTcwOTYyMzQwOX0.BLyAztlxebofzGpjOKsh1fmPl-DBr8RzzD59ZQeiB-8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Electrónica\",\n  \"description\": \"Todos los productos electricos\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
