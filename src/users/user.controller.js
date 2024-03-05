@@ -22,15 +22,12 @@ export const usuariosGet = async (req = request, res = response) => {
 
 export const usuariosPost = async (req, res) => {
     try {
-        // Paso 1: Verificar el token JWT usando el middleware validarJWT
         const usuario = req.usuario;
 
-        // Paso 2: Verificar si el usuario tiene el rol ADMIN_ROLE
         if (usuario.role !== 'ADMIN_ROLE') {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        // Continuar con la lógica de creación de usuario si el usuario tiene el rol ADMIN_ROLE
         const { nombre, correo, password, role } = req.body;
         const nuevoUsuario = new User({ nombre, correo, password, role });
         const salt = bcryptjs.genSaltSync();
@@ -45,32 +42,61 @@ export const usuariosPost = async (req, res) => {
 };
 
 export const getUsuarioById = async (req, res) => {
-    const { id } = req.params;
-    const usuario = await User.findOne({ _id: id });
+    try {
+        const { id } = req.params;
 
-    res.status(200).json({
-        usuario
-    })
-}
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const usuarioEncontrado = await User.findOne({ _id: id });
+
+        if (!usuarioEncontrado) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+
+        res.status(200).json({ usuario: usuarioEncontrado });
+    } catch (error) {
+        console.error('Error al obtener usuario por ID:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
 
 export const usuariosPut = async (req, res = response) => {
-    const { id } = req.params;
-    const { _id, password, google, correo, ...resto } = req.body;
+    try {
+        const { id } = req.params;
+        const { _id, password, google, correo, ...resto } = req.body;
 
-    if (password) {
-        const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(password, salt);
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        if (password) {
+            const salt = bcryptjs.genSaltSync();
+            resto.password = bcryptjs.hashSync(password, salt);
+        }
+
+        await User.findByIdAndUpdate(id, resto);
+
+        const usuarioActualizado = await User.findOne({ _id: id });
+
+        if (!usuarioActualizado) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+
+        res.status(200).json({
+            msg: 'Usuario actualizado',
+            usuario: usuarioActualizado
+        });
+    } catch (error) {
+        console.error('Error al actualizar usuario:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
     }
-
-    await User.findByIdAndUpdate(id, resto);
-
-    const usuario = await User.findOne({ _id: id });
-
-    res.status(200).json({
-        msg: 'Usuario Actualizado',
-        usuario
-    });
-}
+};
 
 export const usuariosDelete = async (req, res) => {
     const { id } = req.params;
