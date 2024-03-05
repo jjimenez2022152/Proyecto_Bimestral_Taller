@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-03-05T01:58:37.097Z",
+    "dateExported": "2024-03-05T07:01:43.712Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -38,14 +38,15 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-05T01:16:24.424Z",
-            "modified": "2024-03-05T01:57:34.828Z",
+            "modified": "2024-03-05T06:24:01.766Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MTk4MDksImV4cCI6MTcwOTYyMzQwOX0.BLyAztlxebofzGpjOKsh1fmPl-DBr8RzzD59ZQeiB-8"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
