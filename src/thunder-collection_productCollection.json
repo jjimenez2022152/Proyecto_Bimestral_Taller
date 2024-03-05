@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "productCollection",
+    "dateExported": "2024-03-05T22:40:02.645Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "83e4a81a-aa8e-4781-b992-fe8da100bdd9",
+            "colId": "f448ffb0-7e73-4dbe-80ce-aee7ad2e0b04",
+            "containerId": "",
+            "name": "productPost",
+            "url": "http://localhost:8080/proyectoBim/v1/product",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-05T22:16:49.487Z",
+            "modified": "2024-03-05T22:31:03.163Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2Nzc3MDQsImV4cCI6MTcwOTY4MTMwNH0.SNAGgQO6Wvo5x4eQVC4xVl05z2q35-eUpNh1epzRJVw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"name\":\"Leche Deslactosada\",\n \"description\": \"Rica leche de calidad\",\n \"price\": 10,\n \"stock\": 20,\n \"categoryId\": \"65e7964e338072e426e4f65c\"\n \n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

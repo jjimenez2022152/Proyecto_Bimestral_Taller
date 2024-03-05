@@ -8,6 +8,8 @@ import { dbConnection } from './mongo.js';
 import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js';
+import productRoutes from '../src/product/product.routes.js';
+
 import User from "../src/users/user.model.js";
 import Category from '../src/category/category.model.js';
 import bcryptjs from 'bcryptjs';
@@ -19,6 +21,8 @@ class Server {
         this.usuarioPath = '/proyectoBim/v1/users';
         this.authPath = '/proyectoBim/v1/auth';
         this.categoryPath = '/proyectoBim/v1/category';
+        this.productPath = '/proyectoBim/v1/product';
+
 
         this.middlewares();
         this.conectarDB();
@@ -63,6 +67,7 @@ class Server {
         this.app.use(this.usuarioPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.categoryPath, categoryRoutes);
+        this.app.use(this.productPath, productRoutes);
     }
 
     listen() {

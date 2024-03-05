@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-05T22:06:53.982Z",
+    "dateExported": "2024-03-05T22:39:52.359Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "95c2a58b-5e29-4b06-9a9b-b7319796abc4",
-            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
+            "_id": "12bee026-8852-490f-bc16-ac1744045399",
+            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
             "containerId": "",
             "name": "categoryPost",
             "url": "http://localhost:8080/proyectoBim/v1/category",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T18:49:31.327Z",
-            "modified": "2024-03-05T22:02:06.728Z",
+            "created": "2024-03-05T22:16:05.649Z",
+            "modified": "2024-03-05T22:16:05.649Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -27,19 +27,18 @@
                 "raw": "{\n  \"name\": \"Moda\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "93a4a0ed-d900-4ca2-b23e-2aedc13fd9d6",
-            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
+            "_id": "92e20234-cf25-4fd8-870f-73872db9361c",
+            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
             "containerId": "",
             "name": "categoryGet",
             "url": "http://localhost:8080/proyectoBim/v1/category/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T18:49:31.328Z",
-            "modified": "2024-03-05T22:02:30.435Z",
+            "created": "2024-03-05T22:16:05.650Z",
+            "modified": "2024-03-05T22:16:05.650Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -47,19 +46,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "f6090685-5fd1-46c2-9331-58d9ad9ade16",
-            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
+            "_id": "ab7b84e5-e999-4439-90f5-2c8214cd25a5",
+            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
             "containerId": "",
             "name": "categoryPut",
             "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-05T20:13:47.206Z",
-            "modified": "2024-03-05T20:45:08.290Z",
+            "created": "2024-03-05T22:16:05.651Z",
+            "modified": "2024-03-05T22:16:05.651Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -72,19 +70,18 @@
                 "raw": "{\n  \"name\": \"Moda A\"\n}",
                 "form": []
             },
-            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "0c2937a0-ccd5-4b2a-b57d-ac9dd2cc54e6",
-            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
+            "_id": "d3d0906b-c633-413c-807b-7333e68a025c",
+            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
             "containerId": "",
             "name": "categotyDelete",
             "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-05T20:49:52.422Z",
-            "modified": "2024-03-05T21:27:18.549Z",
+            "created": "2024-03-05T22:16:05.652Z",
+            "modified": "2024-03-05T22:16:05.652Z",
             "headers": [
                 {
                     "name": "x-token",

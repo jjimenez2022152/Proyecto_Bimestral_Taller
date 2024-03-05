@@ -1,30 +1,26 @@
 import { response, request } from "express";
-import User from './user.model.js';
+import User from '../users/user.model.js';
 import bcryptjs from 'bcryptjs';
 import Product from '../product/product.model.js'
 
 export const productPost = async (req, res) => {
     try {
-        // Verificar el usuario autenticado y su rol
         const usuario = req.usuario;
 
         if (usuario.role !== 'ADMIN_ROLE') {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        // Obtener los datos del cuerpo de la solicitud
         const { name, description, price, stock, categoryId } = req.body;
 
-        // Crear un nuevo producto
         const nuevoProducto = new Product({
             name,
             description,
             price,
             stock,
-            category: categoryId // Asignar el ID de la categoría proporcionada al producto
+            category: categoryId 
         });
 
-        // Guardar el nuevo producto en la base de datos
         await nuevoProducto.save();
 
         res.status(200).json({ producto: nuevoProducto });
