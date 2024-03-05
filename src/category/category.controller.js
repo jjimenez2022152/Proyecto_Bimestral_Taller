@@ -2,22 +2,45 @@ import bcryptjs from 'bcryptjs';
 import Category from '../category/category.model.js';
 
 
-export const categoryPost = async (req, res) => {
+export const categoryGet = async (req = request, res = response) => {
     try {
-        // Verificar el usuario autenticado y su rol
+        const { limite, desde } = req.query;
+
         const usuario = req.usuario;
 
         if (usuario.role !== 'ADMIN_ROLE') {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        // Obtener los datos del cuerpo de la solicitud
-        const { name, description } = req.body;
+        const query = { estado: true };
+        const [total, categorias] = await Promise.all([
+            Category.countDocuments(query),
+            Category.find(query)
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ]);
 
-        // Crear una nueva categoría
+        res.status(200).json({
+            total,
+            categorias
+        });
+    } catch (error) {
+        console.error('Error al obtener categorías:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
+
+export const categoryPost = async (req, res) => {
+    try {
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const { name, description } = req.body;
         const nuevaCategoria = new Category({ name, description });
 
-        // Guardar la nueva categoría en la base de datos
         await nuevaCategoria.save();
 
         res.status(200).json({ categoria: nuevaCategoria });
@@ -26,3 +49,4 @@ export const categoryPost = async (req, res) => {
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
+
