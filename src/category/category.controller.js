@@ -40,8 +40,8 @@ export const categoryPost = async (req, res) => {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        const { name, description } = req.body;
-        const nuevaCategoria = new Category({ name, description });
+        const { name } = req.body; 
+        const nuevaCategoria = new Category({ name });
 
         await nuevaCategoria.save();
 
@@ -56,7 +56,7 @@ export const categoryPost = async (req, res) => {
 export const categoryPut = async (req, res) => {
     try {
         const { id } = req.params;
-        const { _id, ...resto } = req.body;
+        const { name } = req.body; // Solo se requiere el nombre de la categoría
 
         const usuario = req.usuario;
 
@@ -64,9 +64,7 @@ export const categoryPut = async (req, res) => {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        await Category.findByIdAndUpdate(id, resto);
-
-        const categoryActualizada = await Category.findOne({ _id: id });
+        const categoryActualizada = await Category.findByIdAndUpdate(id, { name }, { new: true });
 
         if (!categoryActualizada) {
             return res.status(404).json({ error: 'Categoría no encontrada' });
@@ -79,5 +77,33 @@ export const categoryPut = async (req, res) => {
     } catch (error) {
         console.error('Error al actualizar categoría:', error);
         res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
+
+export const categoryDelete = async (req, res) => {
+    try {
+
+        const {id: categoriaId} = req.params;
+        // Verifica si la categoría existe
+        const categoria = await Category.findById(categoriaId);
+        if (!categoria) {
+            throw new Error('La categoría no existe');
+        }
+
+        // Encuentra la categoría predeterminada (puedes cambiar este ID según tu configuración)
+        const categoriaPredeterminada = await Category.findOne({ name: 'Producto Comercial' });
+
+        // Actualiza los productos asociados a la categoría que se va a eliminar
+        await Producto.updateMany({ category: categoriaId }, { category: categoriaPredeterminada._id });
+
+        // Elimina la categoría
+        const categoryDeleted = await Category.findByIdAndDelete(categoriaId);
+
+        res.status(200).json({
+            category: categoryDeleted
+        })
+    } catch (error) {
+        console.error('Error al eliminar categoría:', error);
+        res.status(500).json({ error: 'Error al eliminar la categoria' });
     }
 };

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-03-05T20:18:53.372Z",
+    "dateExported": "2024-03-05T22:06:59.606Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -96,18 +96,19 @@
             "colId": "20b45388-c8ba-4fca-8f08-9c58c8c4c2b0",
             "containerId": "",
             "name": "userDelete",
-            "url": "http://localhost:8080/proyectoBim/v1/users/65e67a57e7037bb9bee25147",
+            "url": "http://localhost:8080/proyectoBim/v1/users/65e7964e338072e426e4f65c",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-03-05T18:49:31.345Z",
-            "modified": "2024-03-05T18:49:31.345Z",
+            "modified": "2024-03-05T22:04:22.156Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2NzYwNjYsImV4cCI6MTcwOTY3OTY2Nn0.ejTlQdFF0kfLDlBS34jfNm8-wLG5ug3EVhM3e1ZQw5Y"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

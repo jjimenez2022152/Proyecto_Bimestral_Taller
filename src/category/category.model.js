@@ -6,18 +6,14 @@ const categorySchema = mongoose.Schema({
     required: [true, "El nombre es obligatorio"],
     unique: true,
   },
-  description: {
-    type: String,
-    required: [true, "La descripcion es obligaroria"],
-  },
   estado: {
     type: Boolean,
     default: true,
   },
 });
 
-categorySchema.methods.toJSON = function() {
-    const { __v, ...category } = this.toObject(); 
-    return category; 
+categorySchema.methods.toJSON = function () {
+  const { __v, ...category } = this.toObject();
+  return category;
 };
 export default mongoose.model('Category', categorySchema);

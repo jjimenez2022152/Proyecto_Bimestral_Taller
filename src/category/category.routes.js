@@ -4,22 +4,22 @@ import { validarJWT } from "../middlewares/validar-jwt.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { existeNombreCategoria, existeCategoriaById } from "../helpers/db-validators.js";
 //import { tieneRole } from "../middlewares/validar-roles.js";
-import { categoryPost, categoryGet, categoryPut} from "./category.controller.js"; // Importar la función categoryPost del controlador de categorías
+import { categoryPost, categoryGet, categoryPut, categoryDelete } from "./category.controller.js"; // Importar la función categoryPost del controlador de categorías
 
 const router = Router();
 
-router.get("/",validarJWT, categoryGet);
+router.get("/", validarJWT, categoryGet);
 
 router.post(
   "/",
   [
-    validarJWT, 
+    validarJWT,
     check("name").custom(existeNombreCategoria),
     check("name", "El nombre es obligatorio").not().isEmpty(),
-    check("description", "la descripcion es obligatoria").not().isEmpty(),
-    validarCampos, 
+    //check("description", "la descripcion es obligatoria").not().isEmpty(),
+    validarCampos,
   ],
-  categoryPost 
+  categoryPost
 );
 
 router.put(
@@ -33,6 +33,15 @@ router.put(
   categoryPut
 );
 
-
+router.delete(
+  "/:id",
+  [
+  validarJWT,
+  check("id", "No es un ID válido").isMongoId(),
+  check("id").custom(existeCategoriaById),
+  validarCampos,
+  ],
+  categoryDelete
+);
 
 export default router;

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-05T20:18:46.917Z",
+    "dateExported": "2024-03-05T22:06:53.982Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-05T18:49:31.327Z",
-            "modified": "2024-03-05T19:44:44.972Z",
+            "modified": "2024-03-05T22:02:06.728Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzFjMTRmNmNmNWJhZWQ2YzZiZGMiLCJpYXQiOjE3MDk2NjY4MDQsImV4cCI6MTcwOTY3MDQwNH0.SFK8yu7MHvrS-jg8SrWgCspCdr-CjRgRGIFJ_JCUvew"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2NzYwNjYsImV4cCI6MTcwOTY3OTY2Nn0.ejTlQdFF0kfLDlBS34jfNm8-wLG5ug3EVhM3e1ZQw5Y"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Moda\",\n  \"description\": \"Prendas de vestir\"\n}",
+                "raw": "{\n  \"name\": \"Moda\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,11 +39,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-05T18:49:31.328Z",
-            "modified": "2024-03-05T20:15:32.018Z",
+            "modified": "2024-03-05T22:02:30.435Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzFjMTRmNmNmNWJhZWQ2YzZiZGMiLCJpYXQiOjE3MDk2Njk3MDgsImV4cCI6MTcwOTY3MzMwOH0.yKJxM0koSjxpRX8eQHySKGHN3Cv49fEMXTppYN4lKX8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2NzYwNjYsImV4cCI6MTcwOTY3OTY2Nn0.ejTlQdFF0kfLDlBS34jfNm8-wLG5ug3EVhM3e1ZQw5Y"
                 }
             ],
             "params": [],
@@ -55,24 +55,43 @@
             "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
             "containerId": "",
             "name": "categoryPut",
-            "url": "http://localhost:8080/proyectoBim/v1/category/65e7762cd77009de814cd0b4",
+            "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-03-05T20:13:47.206Z",
-            "modified": "2024-03-05T20:16:24.078Z",
+            "modified": "2024-03-05T20:45:08.290Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzFjMTRmNmNmNWJhZWQ2YzZiZGMiLCJpYXQiOjE3MDk2Njk3MDgsImV4cCI6MTcwOTY3MzMwOH0.yKJxM0koSjxpRX8eQHySKGHN3Cv49fEMXTppYN4lKX8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ODQwMTk0YWY3ODgyNWE1YTQ1YjQiLCJpYXQiOjE3MDk2NzE0MzIsImV4cCI6MTcwOTY3NTAzMn0.ODB-UAcVjT7OarSrXSrf_hZM4jZ3OUC68VAPioVUVLo"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Moda\",\n  \"description\": \"Prendas de vestir ferragamo\"\n}",
+                "raw": "{\n  \"name\": \"Moda A\"\n}",
                 "form": []
             },
-            "reqType": "get",
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "0c2937a0-ccd5-4b2a-b57d-ac9dd2cc54e6",
+            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
+            "containerId": "",
+            "name": "categotyDelete",
+            "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-05T20:49:52.422Z",
+            "modified": "2024-03-05T21:27:18.549Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ODQwMTk0YWY3ODgyNWE1YTQ1YjQiLCJpYXQiOjE3MDk2NzM5ODYsImV4cCI6MTcwOTY3NzU4Nn0.ENMsGg7xirJ48tW6XM4JONkQKZ-hMVGkNUN2UL6t69I"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]

@@ -9,6 +9,7 @@ import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js';
 import User from "../src/users/user.model.js";
+import Category from '../src/category/category.model.js';
 import bcryptjs from 'bcryptjs';
 
 class Server {
@@ -38,6 +39,16 @@ class Server {
 
         adminUser.save()
         
+
+        const lenghtCategory = await Category.countDocuments()
+        if (lenghtCategory > 0 ) return;
+
+        const categoryDefault = new Category(
+            { name: "Producto Comercial"}
+        )
+
+        categoryDefault.save()
+
     }
 
     middlewares() {
