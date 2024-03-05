@@ -1,18 +1,19 @@
 import bcryptjs from 'bcryptjs';
 import Category from '../category/category.model.js';
+import User from '../users/user.model.js';
 
 
-export const categoryGet = async (req = request, res = response) => {
+export const categoryGet = async (req, res) => {
+    const { limite, desde } = req.query;
+    const query = { estado: true };
+
     try {
-        const { limite, desde } = req.query;
-
         const usuario = req.usuario;
 
         if (usuario.role !== 'ADMIN_ROLE') {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        const query = { estado: true };
         const [total, categorias] = await Promise.all([
             Category.countDocuments(query),
             Category.find(query)
@@ -29,6 +30,7 @@ export const categoryGet = async (req = request, res = response) => {
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
+
 
 export const categoryPost = async (req, res) => {
     try {

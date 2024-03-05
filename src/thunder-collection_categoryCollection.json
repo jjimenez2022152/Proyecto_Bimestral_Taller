@@ -1,24 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-05T07:01:47.319Z",
+    "dateExported": "2024-03-05T19:32:04.011Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "33516ea0-f368-4da7-88c0-20a26d44ba0a",
-            "colId": "b7b40aa8-7e9e-400e-9246-79e3c815f1fb",
+            "_id": "95c2a58b-5e29-4b06-9a9b-b7319796abc4",
+            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
             "containerId": "",
             "name": "categoryPost",
             "url": "http://localhost:8080/proyectoBim/v1/category",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T06:20:36.279Z",
-            "modified": "2024-03-05T06:23:44.058Z",
+            "created": "2024-03-05T18:49:31.327Z",
+            "modified": "2024-03-05T19:26:57.644Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MTk4MDksImV4cCI6MTcwOTYyMzQwOX0.BLyAztlxebofzGpjOKsh1fmPl-DBr8RzzD59ZQeiB-8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzFjMTRmNmNmNWJhZWQ2YzZiZGMiLCJpYXQiOjE3MDk2NjY4MDQsImV4cCI6MTcwOTY3MDQwNH0.SFK8yu7MHvrS-jg8SrWgCspCdr-CjRgRGIFJ_JCUvew"
                 }
             ],
             "params": [],
@@ -27,25 +27,27 @@
                 "raw": "{\n  \"name\": \"Electrónica\",\n  \"description\": \"Todos los productos electricos\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "9e01076a-9bfe-44e4-ab30-173fc09b2823",
-            "colId": "b7b40aa8-7e9e-400e-9246-79e3c815f1fb",
+            "_id": "93a4a0ed-d900-4ca2-b23e-2aedc13fd9d6",
+            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
             "containerId": "",
             "name": "categoryGet",
-            "url": "http://localhost:8080/proyectoBim/v1/category",
+            "url": "http://localhost:8080/proyectoBim/v1/category/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T06:49:07.790Z",
-            "modified": "2024-03-05T06:49:36.407Z",
+            "created": "2024-03-05T18:49:31.328Z",
+            "modified": "2024-03-05T19:31:22.466Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MjEzNjQsImV4cCI6MTcwOTYyNDk2NH0._qZmG6nB7h6ExktxDqyJo1sIifDt2z9TfNwddz9WSBM"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzJmM2JkOThhODQ0MzIwMWM1YTgiLCJpYXQiOjE3MDk2NjcwNjUsImV4cCI6MTcwOTY3MDY2NX0.u-jScyeUcLzRkz3bGkuWAKrpXP3UXFYCkpKO7n__7Mg"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         }
     ]

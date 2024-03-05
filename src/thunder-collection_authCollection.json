@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-05T07:01:39.352Z",
+    "dateExported": "2024-03-05T19:31:53.500Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "7f8462fe-1fee-4d80-a6e9-b60a1bda4415",
-            "colId": "cf8281f6-7a39-4e58-8aea-c803986edc67",
+            "_id": "c4f9c968-e1c6-43b9-80af-bbea747c5948",
+            "colId": "0d94f6b3-1dea-4594-ac68-1166088fe88d",
             "containerId": "",
             "name": "signUp",
             "url": "http://localhost:8080/proyectoBim/v1/auth/signUp",
             "method": "POST",
             "sortNum": 5000,
-            "created": "2024-03-05T01:16:24.413Z",
-            "modified": "2024-03-05T01:16:24.413Z",
+            "created": "2024-03-05T18:49:31.315Z",
+            "modified": "2024-03-05T18:49:31.315Z",
             "headers": [],
             "params": [],
             "body": {
@@ -25,22 +25,23 @@
             "tests": []
         },
         {
-            "_id": "2282ac8b-ed8a-40ea-80c7-4b692ec5900b",
-            "colId": "cf8281f6-7a39-4e58-8aea-c803986edc67",
+            "_id": "eb60f0df-b925-4387-a593-c43337382c06",
+            "colId": "0d94f6b3-1dea-4594-ac68-1166088fe88d",
             "containerId": "",
             "name": "login",
             "url": "http://localhost:8080/proyectoBim/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T01:16:24.412Z",
-            "modified": "2024-03-05T01:38:35.040Z",
+            "created": "2024-03-05T18:49:31.314Z",
+            "modified": "2024-03-05T19:31:06.013Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\":\"admin@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "raw": "{\n  \"correo\":\"client1@gmail.com\",\n  \"password\":\"123456\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         }
     ]
