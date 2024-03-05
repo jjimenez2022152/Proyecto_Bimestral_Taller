@@ -36,6 +36,7 @@ export const existenteEmail = async (correo = '') => {
         throw new Error(`El email ${correo} ya fue registrado`);
     }
 }
+// /Categorias ///////////////////////////////////
 
 export const existeNombreCategoria = async (name = '') => {
     const existeCategoria = await Category.findOne({ name });
@@ -43,6 +44,16 @@ export const existeNombreCategoria = async (name = '') => {
         throw new Error(`La categoría "${name}" ya existe.`);
     }
 };
+
+export const existeCategoriaById = async (id = '') => {
+    const existeCategoria = await Category.findById(id);
+    if (!existeCategoria){
+        throw new Error(`La categoría con ID: ${id} no existe`);
+    }
+};
+
+// ////////////////////////////////////////
+
 
 export const existeUsuarioById = async (id = '') => {
     const existeUsuario = await User.findById(id);
