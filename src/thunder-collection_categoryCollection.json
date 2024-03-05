@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-05T19:32:04.011Z",
+    "dateExported": "2024-03-05T20:18:46.917Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,7 +14,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-05T18:49:31.327Z",
-            "modified": "2024-03-05T19:26:57.644Z",
+            "modified": "2024-03-05T19:44:44.972Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -24,7 +24,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Electrónica\",\n  \"description\": \"Todos los productos electricos\"\n}",
+                "raw": "{\n  \"name\": \"Moda\",\n  \"description\": \"Prendas de vestir\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,14 +39,39 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-05T18:49:31.328Z",
-            "modified": "2024-03-05T19:31:22.466Z",
+            "modified": "2024-03-05T20:15:32.018Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzJmM2JkOThhODQ0MzIwMWM1YTgiLCJpYXQiOjE3MDk2NjcwNjUsImV4cCI6MTcwOTY3MDY2NX0.u-jScyeUcLzRkz3bGkuWAKrpXP3UXFYCkpKO7n__7Mg"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzFjMTRmNmNmNWJhZWQ2YzZiZGMiLCJpYXQiOjE3MDk2Njk3MDgsImV4cCI6MTcwOTY3MzMwOH0.yKJxM0koSjxpRX8eQHySKGHN3Cv49fEMXTppYN4lKX8"
                 }
             ],
             "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "f6090685-5fd1-46c2-9331-58d9ad9ade16",
+            "colId": "6a6abe31-1c62-48e5-9986-3663d4590148",
+            "containerId": "",
+            "name": "categoryPut",
+            "url": "http://localhost:8080/proyectoBim/v1/category/65e7762cd77009de814cd0b4",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-05T20:13:47.206Z",
+            "modified": "2024-03-05T20:16:24.078Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzFjMTRmNmNmNWJhZWQ2YzZiZGMiLCJpYXQiOjE3MDk2Njk3MDgsImV4cCI6MTcwOTY3MzMwOH0.yKJxM0koSjxpRX8eQHySKGHN3Cv49fEMXTppYN4lKX8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Moda\",\n  \"description\": \"Prendas de vestir ferragamo\"\n}",
+                "form": []
+            },
             "reqType": "get",
             "tests": []
         }
