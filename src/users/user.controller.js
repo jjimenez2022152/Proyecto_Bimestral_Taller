@@ -3,22 +3,32 @@ import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
 
 export const usuariosGet = async (req = request, res = response) => {
-    const { limite, desde } = req.query;
-    const query = { estado: true };
+    try {
+        const { limite, desde } = req.query;
 
+        const usuario = req.usuario;
 
-    const [total, usuarios] = await Promise.all([
-        User.countDocuments(query),
-        User.find(query)
-            .skip(Number(desde))
-            .limit(Number(limite))
-    ]);
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
 
-    res.status(200).json({
-        total,
-        usuarios
-    });
-}
+        const query = { estado: true };
+        const [total, usuarios] = await Promise.all([
+            User.countDocuments(query),
+            User.find(query)
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ]);
+
+        res.status(200).json({
+            total,
+            usuarios
+        });
+    } catch (error) {
+        console.error('Error al obtener usuarios:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
 
 export const usuariosPost = async (req, res) => {
     try {
@@ -99,11 +109,24 @@ export const usuariosPut = async (req, res = response) => {
 };
 
 export const usuariosDelete = async (req, res) => {
-    const { id } = req.params;
+    try {
+        const { id } = req.params;
 
+        const usuario = req.usuario;
 
-    const usuario = await User.findByIdAndUpdate(id, { estado: false });
-    const usuarioAutenticado = req.usuario;
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
 
-    res.status(200).json({ msg: 'Usuario a eliminar', usuario, usuarioAutenticado });
-}
+        const usuarioEliminado = await User.findByIdAndUpdate(id, { estado: false });
+
+        if (!usuarioEliminado) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+
+        res.status(200).json({ msg: 'Usuario eliminado', usuario: usuarioEliminado });
+    } catch (error) {
+        console.error('Error al eliminar usuario:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};

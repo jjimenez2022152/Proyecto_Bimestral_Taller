@@ -1,98 +1,113 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-03-04T23:28:58.818Z",
+    "dateExported": "2024-03-05T01:58:37.097Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "c10a632d-8b25-4582-b4e5-4e92f0fe1812",
-            "colId": "6f6b4e9e-13e8-433f-b440-0fc20de1859d",
+            "_id": "5263a225-1c52-418c-9f16-7dd56b60a796",
+            "colId": "d9c5b4e4-0676-4a06-ad58-73b294b670d7",
             "containerId": "",
             "name": "userPost",
             "url": "http://localhost:8080/proyectoBim/v1/users",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-04T20:16:31.169Z",
-            "modified": "2024-03-04T23:20:56.453Z",
+            "created": "2024-03-05T01:16:24.423Z",
+            "modified": "2024-03-05T01:50:15.710Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NTMyYTEzM2RlNWEzYmUzNGE2YzQiLCJpYXQiOjE3MDk1OTQ0MzksImV4cCI6MTcwOTU5ODAzOX0.HEVd2vRPsT2qOi_2-HWF5X-rMPJOIv2tgNWjn8kSNzI"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Admin1\",\n  \"correo\": \"Admin1@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"Admin3\",\n  \"correo\": \"Admin3@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "529a9df2-adfc-458e-bda2-f76a2488e208",
-            "colId": "6f6b4e9e-13e8-433f-b440-0fc20de1859d",
+            "_id": "61d71db1-6ead-4632-bb0a-925b98762438",
+            "colId": "d9c5b4e4-0676-4a06-ad58-73b294b670d7",
             "containerId": "",
             "name": "userGet",
             "url": "http://localhost:8080/proyectoBim/v1/users",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-04T20:16:31.170Z",
-            "modified": "2024-03-04T20:20:39.795Z",
-            "headers": [],
+            "created": "2024-03-05T01:16:24.424Z",
+            "modified": "2024-03-05T01:57:34.828Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                }
+            ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "12e73b68-cc6b-439e-bbd0-0e8daa9a15b3",
-            "colId": "6f6b4e9e-13e8-433f-b440-0fc20de1859d",
+            "_id": "e3a63b12-6b9d-475f-8ae8-83b2e92b59de",
+            "colId": "d9c5b4e4-0676-4a06-ad58-73b294b670d7",
             "containerId": "",
             "name": "userGetById",
-            "url": "http://localhost:8080/proyectoBim/v1/users/65e630f9fae8401256a74985",
+            "url": "http://localhost:8080/proyectoBim/v1/users/65e67379ba7507f22899a8a1",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-04T20:16:31.171Z",
-            "modified": "2024-03-04T21:35:17.048Z",
-            "headers": [],
+            "created": "2024-03-05T01:16:24.425Z",
+            "modified": "2024-03-05T01:38:43.628Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                }
+            ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "23ae5e0d-28c6-46fb-bca3-980168118cdb",
-            "colId": "6f6b4e9e-13e8-433f-b440-0fc20de1859d",
+            "_id": "11583ddf-f9bc-44d1-83ff-580c59c5649e",
+            "colId": "d9c5b4e4-0676-4a06-ad58-73b294b670d7",
             "containerId": "",
             "name": "userPut",
-            "url": "http://localhost:8080/proyectoBim/v1/users/65d99451981f588769e92814",
+            "url": "http://localhost:8080/proyectoBim/v1/users/65e673a4ba7507f22899a8a4",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-04T20:16:31.172Z",
-            "modified": "2024-03-04T20:21:17.556Z",
-            "headers": [],
+            "created": "2024-03-05T01:16:24.426Z",
+            "modified": "2024-03-05T01:45:57.886Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"User5Actualizado\",\n  \"correo\": \"User5@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"USER_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"Cliente 1 Actualizado\",\n  \"correo\": \"client1@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"CLIENT_ROLE\"\n}",
                 "form": []
             },
-            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "60374c89-178c-49fa-90bb-a5c5c43cb9fa",
-            "colId": "6f6b4e9e-13e8-433f-b440-0fc20de1859d",
+            "_id": "b32369ba-24e8-49d0-952a-cec7659e1d57",
+            "colId": "d9c5b4e4-0676-4a06-ad58-73b294b670d7",
             "containerId": "",
             "name": "userDelete",
-            "url": "http://localhost:8080/proyectoBim/v1/users/65d995da981f588769e92845",
+            "url": "http://localhost:8080/proyectoBim/v1/users/65e67a57e7037bb9bee25147",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-04T20:16:31.173Z",
-            "modified": "2024-03-04T20:21:23.945Z",
-            "headers": [],
+            "created": "2024-03-05T01:16:24.427Z",
+            "modified": "2024-03-05T01:58:00.769Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                }
+            ],
             "params": [],
-            "reqType": "del",
             "tests": []
         }
     ]

@@ -1,40 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-04T23:29:06.202Z",
+    "dateExported": "2024-03-05T01:58:33.658Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "527625e1-1c45-42ef-acb9-c5929e9a4db5",
-            "colId": "f1fb0bd9-a88c-4697-ad9f-b52c77b926a3",
-            "containerId": "",
-            "name": "login",
-            "url": "http://localhost:8080/proyectoBim/v1/auth/login",
-            "method": "POST",
-            "sortNum": 10000,
-            "created": "2024-03-04T20:29:52.913Z",
-            "modified": "2024-03-04T23:20:39.656Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"correo\":\"admin@gmail.com\",\n  \"password\":\"123456\"\n}",
-                "form": []
-            },
-            "reqType": "post",
-            "tests": []
-        },
-        {
-            "_id": "394df335-f082-42e9-be32-630388c7ba53",
-            "colId": "f1fb0bd9-a88c-4697-ad9f-b52c77b926a3",
+            "_id": "7f8462fe-1fee-4d80-a6e9-b60a1bda4415",
+            "colId": "cf8281f6-7a39-4e58-8aea-c803986edc67",
             "containerId": "",
             "name": "signUp",
             "url": "http://localhost:8080/proyectoBim/v1/auth/signUp",
             "method": "POST",
-            "sortNum": 20000,
-            "created": "2024-03-04T23:05:18.585Z",
-            "modified": "2024-03-04T23:13:06.801Z",
+            "sortNum": 5000,
+            "created": "2024-03-05T01:16:24.413Z",
+            "modified": "2024-03-05T01:16:24.413Z",
             "headers": [],
             "params": [],
             "body": {
@@ -42,7 +22,25 @@
                 "raw": "{\n  \"nombre\": \"Cliente 1\",\n  \"correo\": \"client1@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
-            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "2282ac8b-ed8a-40ea-80c7-4b692ec5900b",
+            "colId": "cf8281f6-7a39-4e58-8aea-c803986edc67",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:8080/proyectoBim/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-05T01:16:24.412Z",
+            "modified": "2024-03-05T01:38:35.040Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\":\"admin@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]
