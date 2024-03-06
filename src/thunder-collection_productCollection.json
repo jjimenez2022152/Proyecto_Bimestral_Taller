@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-06T05:33:01.931Z",
+    "dateExported": "2024-03-06T06:21:47.493Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T04:29:46.078Z",
-            "modified": "2024-03-06T05:06:25.671Z",
+            "modified": "2024-03-06T05:58:37.035Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDQ2NzEsImV4cCI6MTcwOTcwODI3MX0.DdZEAkhsgsKtt4ohEzIAdH7EgywAughCHPO_1J9NrVM"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"name\":\"Gorra New Era\",\n \"description\": \"Gorra beisbolera\",\n \"price\": 10,\n \"stock\": 20,\n \"categoryId\": \"65e7f19403d7f3ac0e1356b2\"\n}",
+                "raw": "{\n \"name\":\"Legos\",\n \"description\": \"Lego Batman\",\n \"price\": 10,\n \"stock\": 0,\n \"categoryId\": \"65e7f19403d7f3ac0e1356b2\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -35,11 +35,11 @@
             "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
             "containerId": "",
             "name": "productGet",
-            "url": "http://localhost:8080/proyectoBim/v1/product",
+            "url": "http://localhost:8080/proyectoBim/v1/product/allProducts",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T04:29:46.079Z",
-            "modified": "2024-03-06T05:32:35.749Z",
+            "modified": "2024-03-06T06:19:31.237Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -111,6 +111,26 @@
                 }
             ],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "92d17f31-278d-42a1-9a46-bd563bf4893f",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "containerId": "",
+            "name": "ProductosAgotados",
+            "url": "http://localhost:8080/proyectoBim/v1/product/",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-06T06:01:43.638Z",
+            "modified": "2024-03-06T06:18:45.196Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDQ2NzEsImV4cCI6MTcwOTcwODI3MX0.DdZEAkhsgsKtt4ohEzIAdH7EgywAughCHPO_1J9NrVM"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
             "tests": []
         }
     ]

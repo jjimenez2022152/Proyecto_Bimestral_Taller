@@ -139,3 +139,32 @@ export const productDelete = async (req, res) => {
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
+
+export const productAgotadoGet = async (req, res) => {
+    const { limite, desde } = req.query;
+    const query = { stock: 0 };
+
+    try {
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const [total, productosAgotados] = await Promise.all([
+            Product.countDocuments(query),
+            Product.find(query)
+                .populate('category')
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ]);
+
+        res.status(200).json({
+            total,
+            productos: productosAgotados
+        });
+    } catch (error) {
+        console.error('Error al obtener productos agotados:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
