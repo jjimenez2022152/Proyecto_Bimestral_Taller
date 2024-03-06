@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-06T06:21:47.493Z",
+    "dateExported": "2024-03-06T06:51:32.090Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,7 +14,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T04:29:46.078Z",
-            "modified": "2024-03-06T05:58:37.035Z",
+            "modified": "2024-03-06T06:45:26.891Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -24,7 +24,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"name\":\"Legos\",\n \"description\": \"Lego Batman\",\n \"price\": 10,\n \"stock\": 0,\n \"categoryId\": \"65e7f19403d7f3ac0e1356b2\"\n}",
+                "raw": "{\n \"name\":\"Pachon\",\n \"description\": \"Pachon de 8 litros\",\n \"price\": 50,\n \"stock\": 5,\n \"categoryId\": \"65e7f19403d7f3ac0e1356b2\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,11 +39,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T04:29:46.079Z",
-            "modified": "2024-03-06T06:19:31.237Z",
+            "modified": "2024-03-06T06:39:34.249Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDMxNDgsImV4cCI6MTcwOTcwNjc0OH0.QWwnN6ujMwPQca8ApGK10NXcwnzBffq7yqw1DmMplQ0"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDY5NzIsImV4cCI6MTcwOTcxMDU3Mn0.BJzU3690dLNvSIUmDAhnPuaInkVKJwwmyaD-72Wo_FA"
                 }
             ],
             "params": [],
@@ -131,6 +131,25 @@
             ],
             "params": [],
             "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "550fb0b6-5c5b-4678-b201-4095551d281e",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "containerId": "",
+            "name": "Productos Mas Vendidos",
+            "url": "http://localhost:8080/proyectoBim/v1/product/masVendidos",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-06T06:35:24.514Z",
+            "modified": "2024-03-06T06:36:26.318Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDY5NzIsImV4cCI6MTcwOTcxMDU3Mn0.BJzU3690dLNvSIUmDAhnPuaInkVKJwwmyaD-72Wo_FA"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]

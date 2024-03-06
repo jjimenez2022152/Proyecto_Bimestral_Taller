@@ -6,12 +6,12 @@ import { existeNombreProducto } from "../helpers/db-validators.js";
 import { existeProductoById } from "../helpers/db-validators.js";
 
 //import { tieneRole } from "../middlewares/validar-roles.js";
-import { productPost, productPut, productGet, getProductById, productDelete, productAgotadoGet } from "./product.controller.js"; 
+import { productPost, productPut, productGet, getProductById, productDelete, productAgotadoGet, productoMasVendido } from "./product.controller.js"; 
 const router = Router();
 
 
 router.get("/allProducts", validarJWT, productGet);
-
+router.get("/masVendidos", validarJWT, productoMasVendido);
 
 router.post(
   "/", 
@@ -61,5 +61,7 @@ router.delete(
 )
 
 router.get("/", validarJWT, productAgotadoGet);
+
+
 
 export default router;
