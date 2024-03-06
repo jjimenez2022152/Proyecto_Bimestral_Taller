@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-06T05:06:49.382Z",
+    "dateExported": "2024-03-06T05:33:01.931Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -39,11 +39,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T04:29:46.079Z",
-            "modified": "2024-03-06T05:02:04.136Z",
+            "modified": "2024-03-06T05:32:35.749Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDMxNDgsImV4cCI6MTcwOTcwNjc0OH0.QWwnN6ujMwPQca8ApGK10NXcwnzBffq7yqw1DmMplQ0"
                 }
             ],
             "params": [],
@@ -72,6 +72,45 @@
                 "raw": "{\n \"name\": \"Gorra Yeezy\",\n \"description\": \"Yeeze gorra super cool\",\n \"price\": 15.50,\n \"stock\": 15,\n \"category\": \"65e7f1b703d7f3ac0e1356ba\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "4a3e62ce-a738-4e18-aa02-8ff1592dfd11",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "containerId": "",
+            "name": "productGetById",
+            "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-06T05:15:21.787Z",
+            "modified": "2024-03-06T05:15:54.491Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDIxNDksImV4cCI6MTcwOTcwNTc0OX0.gCcef2d_Om-FqTJ2Iv3KUjg3LZCGs2_gHIOKnEFEHLQ"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "28c91fc1-58d2-4eaf-bcfb-008f3a4f7cf7",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "containerId": "",
+            "name": "productDelete",
+            "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-06T05:25:08.067Z",
+            "modified": "2024-03-06T05:25:32.141Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDIxNDksImV4cCI6MTcwOTcwNTc0OX0.gCcef2d_Om-FqTJ2Iv3KUjg3LZCGs2_gHIOKnEFEHLQ"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]

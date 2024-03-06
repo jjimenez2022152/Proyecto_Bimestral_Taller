@@ -6,7 +6,7 @@ import { existeNombreProducto } from "../helpers/db-validators.js";
 import { existeProductoById } from "../helpers/db-validators.js";
 
 //import { tieneRole } from "../middlewares/validar-roles.js";
-import { productPost, productPut, productGet } from "./product.controller.js"; 
+import { productPost, productPut, productGet, getProductById, productDelete } from "./product.controller.js"; 
 const router = Router();
 
 
@@ -39,5 +39,25 @@ router.put(
   productPut 
 );
 
+router.get(
+  "/:id",
+  [
+    validarJWT,
+    check("id", "No es un ID válido").isMongoId(),
+    check("id").custom(existeProductoById),
+  ],
+  getProductById
+)
+
+
+router.delete(
+  "/:id",
+  [
+    validarJWT,
+    check("id", "No es un ID válido").isMongoId(),
+    check("id").custom(existeProductoById),
+  ],
+  productDelete
+)
 
 export default router;

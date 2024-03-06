@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-06T05:06:43.998Z",
+    "dateExported": "2024-03-06T05:32:58.291Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -55,23 +55,24 @@
             "colId": "817853f5-343f-451a-836d-be323b4de31b",
             "containerId": "",
             "name": "categoryPut",
-            "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
+            "url": "http://localhost:8080/proyectoBim/v1/category/65e7f19f03d7f3ac0e1356b6",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-03-06T04:29:46.069Z",
-            "modified": "2024-03-06T04:29:46.069Z",
+            "modified": "2024-03-06T05:10:01.498Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ODQwMTk0YWY3ODgyNWE1YTQ1YjQiLCJpYXQiOjE3MDk2NzE0MzIsImV4cCI6MTcwOTY3NTAzMn0.ODB-UAcVjT7OarSrXSrf_hZM4jZ3OUC68VAPioVUVLo"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDEzNTMsImV4cCI6MTcwOTcwNDk1M30.VV8vT1zyEOXHPC1XGN_Kw8s8RLEnECBaAj4ZhXifRbs"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Moda A\"\n}",
+                "raw": "{\n  \"name\": \"Lacteos AA\"\n}",
                 "form": []
             },
+            "reqType": "put",
             "tests": []
         },
         {

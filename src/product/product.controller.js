@@ -33,9 +33,6 @@ export const productGet = async (req, res) => {
     }
 };
 
-
-
-
 export const productPost = async (req, res) => {
     try {
         const usuario = req.usuario;
@@ -65,43 +62,80 @@ export const productPost = async (req, res) => {
 
 export const productPut = async (req, res) => {
     try {
-        // Obtener el ID del producto de los parámetros de la solicitud
         const { id } = req.params;
-
-        // Extraer el ID, contraseña, google y correo del cuerpo de la solicitud
         const { _id, password, google, correo, ...resto } = req.body;
 
-        // Verificar el usuario autenticado y su rol
         const usuario = req.usuario;
 
         if (usuario.role !== 'ADMIN_ROLE') {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        // Si se proporciona una nueva contraseña, encriptarla antes de actualizarla
         if (password) {
             const salt = bcryptjs.genSaltSync();
             resto.password = bcryptjs.hashSync(password, salt);
         }
 
-        // Actualizar el producto en la base de datos
         await Product.findByIdAndUpdate(id, resto);
 
-        // Buscar el producto actualizado en la base de datos
         const productoActualizado = await Product.findOne({ _id: id });
 
-        // Verificar si el producto fue encontrado
         if (!productoActualizado) {
             return res.status(404).json({ error: 'Producto no encontrado' });
         }
 
-        // Enviar respuesta con el producto actualizado
         res.status(200).json({
             msg: 'Producto actualizado',
             producto: productoActualizado
         });
     } catch (error) {
         console.error('Error al actualizar producto:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
+
+export const getProductById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const productoEncontrado = await Product.findOne({ _id: id }).populate('category');
+
+        if (!productoEncontrado) {
+            return res.status(404).json({ error: 'Producto no encontrado' });
+        }
+
+        res.status(200).json({ producto: productoEncontrado });
+    } catch (error) {
+        console.error('Error al obtener producto por ID:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
+
+export const productDelete = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const productoEliminado = await Product.findByIdAndUpdate(id, { estado: false });
+
+        if (!productoEliminado) {
+            return res.status(404).json({ error: 'Producto no encontrado' });
+        }
+
+        res.status(200).json({ msg: 'Producto eliminado', producto: productoEliminado });
+    } catch (error) {
+        console.error('Error al eliminar producto:', error);
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
