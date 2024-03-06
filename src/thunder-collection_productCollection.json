@@ -1,52 +1,77 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-05T23:10:08.699Z",
+    "dateExported": "2024-03-06T05:06:49.382Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "83e4a81a-aa8e-4781-b992-fe8da100bdd9",
-            "colId": "f448ffb0-7e73-4dbe-80ce-aee7ad2e0b04",
+            "_id": "9cc7db1b-cf4d-44ce-a592-b877882bd7a5",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
             "containerId": "",
             "name": "productPost",
             "url": "http://localhost:8080/proyectoBim/v1/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T22:16:49.487Z",
-            "modified": "2024-03-05T23:00:14.196Z",
+            "created": "2024-03-06T04:29:46.078Z",
+            "modified": "2024-03-06T05:06:25.671Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2Nzc3MDQsImV4cCI6MTcwOTY4MTMwNH0.SNAGgQO6Wvo5x4eQVC4xVl05z2q35-eUpNh1epzRJVw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"name\":\"Leche Deslactosada\",\n \"description\": \"Ricaa leche de calidad\",\n \"price\": 10,\n \"stock\": 20,\n \"categoryId\": \"65e7964e338072e426e4f65c\"\n \n}",
+                "raw": "{\n \"name\":\"Gorra New Era\",\n \"description\": \"Gorra beisbolera\",\n \"price\": 10,\n \"stock\": 20,\n \"categoryId\": \"65e7f19403d7f3ac0e1356b2\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "6de35838-365c-462c-8587-c915007e5c9e",
-            "colId": "f448ffb0-7e73-4dbe-80ce-aee7ad2e0b04",
+            "_id": "f61bf006-4576-4597-b997-b5098e567932",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
             "containerId": "",
             "name": "productGet",
             "url": "http://localhost:8080/proyectoBim/v1/product",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T22:46:20.100Z",
-            "modified": "2024-03-05T22:50:28.217Z",
+            "created": "2024-03-06T04:29:46.079Z",
+            "modified": "2024-03-06T05:02:04.136Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2NzkwMTcsImV4cCI6MTcwOTY4MjYxN30.eX5J-LXGAq-qaeKwWB2V4OC_c8MNO5uuAeqs798C3-M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
                 }
             ],
             "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "94b61333-806b-4700-9b0a-5bde036be863",
+            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "containerId": "",
+            "name": "productPut",
+            "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-06T04:47:41.794Z",
+            "modified": "2024-03-06T05:03:51.142Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDEzNTMsImV4cCI6MTcwOTcwNDk1M30.VV8vT1zyEOXHPC1XGN_Kw8s8RLEnECBaAj4ZhXifRbs"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"name\": \"Gorra Yeezy\",\n \"description\": \"Yeeze gorra super cool\",\n \"price\": 15.50,\n \"stock\": 15,\n \"category\": \"65e7f1b703d7f3ac0e1356ba\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

@@ -1,63 +1,65 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-05T23:09:56.971Z",
+    "dateExported": "2024-03-06T05:06:43.998Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "12bee026-8852-490f-bc16-ac1744045399",
-            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
+            "_id": "1150d174-0e31-4ee8-bb0d-8b3857303489",
+            "colId": "817853f5-343f-451a-836d-be323b4de31b",
             "containerId": "",
             "name": "categoryPost",
             "url": "http://localhost:8080/proyectoBim/v1/category",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T22:16:05.649Z",
-            "modified": "2024-03-05T22:16:05.649Z",
+            "created": "2024-03-06T04:29:46.067Z",
+            "modified": "2024-03-06T04:31:51.046Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2NzYwNjYsImV4cCI6MTcwOTY3OTY2Nn0.ejTlQdFF0kfLDlBS34jfNm8-wLG5ug3EVhM3e1ZQw5Y"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Moda\"\n}",
+                "raw": "{\n  \"name\": \"Electronica\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "92e20234-cf25-4fd8-870f-73872db9361c",
-            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
+            "_id": "a3bad12a-0828-4e31-a414-1c78ba8e8178",
+            "colId": "817853f5-343f-451a-836d-be323b4de31b",
             "containerId": "",
             "name": "categoryGet",
             "url": "http://localhost:8080/proyectoBim/v1/category/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T22:16:05.650Z",
-            "modified": "2024-03-05T22:16:05.650Z",
+            "created": "2024-03-06T04:29:46.068Z",
+            "modified": "2024-03-06T04:33:12.610Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OTVjNWIwNzJhODk3Y2JiMDc3ZWYiLCJpYXQiOjE3MDk2NzYwNjYsImV4cCI6MTcwOTY3OTY2Nn0.ejTlQdFF0kfLDlBS34jfNm8-wLG5ug3EVhM3e1ZQw5Y"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "ab7b84e5-e999-4439-90f5-2c8214cd25a5",
-            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
+            "_id": "68f8eec1-d017-47d1-acc5-a638e87d9c34",
+            "colId": "817853f5-343f-451a-836d-be323b4de31b",
             "containerId": "",
             "name": "categoryPut",
             "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-05T22:16:05.651Z",
-            "modified": "2024-03-05T22:16:05.651Z",
+            "created": "2024-03-06T04:29:46.069Z",
+            "modified": "2024-03-06T04:29:46.069Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -73,22 +75,23 @@
             "tests": []
         },
         {
-            "_id": "d3d0906b-c633-413c-807b-7333e68a025c",
-            "colId": "606ab8c4-05ff-402b-99d6-29b0fbd1f41c",
+            "_id": "f12ccf6e-edc7-4939-a984-552055d5b275",
+            "colId": "817853f5-343f-451a-836d-be323b4de31b",
             "containerId": "",
             "name": "categotyDelete",
             "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-05T22:16:05.652Z",
-            "modified": "2024-03-05T22:16:05.652Z",
+            "created": "2024-03-06T04:29:46.070Z",
+            "modified": "2024-03-06T04:33:44.685Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ODQwMTk0YWY3ODgyNWE1YTQ1YjQiLCJpYXQiOjE3MDk2NzM5ODYsImV4cCI6MTcwOTY3NzU4Nn0.ENMsGg7xirJ48tW6XM4JONkQKZ-hMVGkNUN2UL6t69I"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

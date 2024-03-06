@@ -2,6 +2,9 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
+import { existeNombreProducto } from "../helpers/db-validators.js";
+import { existeProductoById } from "../helpers/db-validators.js";
+
 //import { tieneRole } from "../middlewares/validar-roles.js";
 import { productPost, productPut, productGet } from "./product.controller.js"; 
 const router = Router();
@@ -15,6 +18,7 @@ router.post(
   [
     validarJWT, 
     check("name", "El nombre es obligatorio").not().isEmpty(),
+    check("name" ,"Producto con nombre ya registrado").custom(existeNombreProducto),
     check("description", "La descripcion es obligatoria").not().isEmpty(),
     check("price", "El precio es de caracter obligatorio").not().isEmpty(),
     check("stock", "El stock es obligatorio").not().isEmpty(),
@@ -29,7 +33,7 @@ router.put(
   [
     validarJWT, 
     check("id", "No es un ID válido").isMongoId(),
-    //check("id").custom(existeUsuarioById),
+    check("id").custom(existeProductoById),
     validarCampos, 
   ],
   productPut 

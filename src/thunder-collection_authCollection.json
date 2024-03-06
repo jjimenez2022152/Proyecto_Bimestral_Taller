@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-05T23:09:52.227Z",
+    "dateExported": "2024-03-06T05:06:34.494Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "bbb57317-46b2-413a-bca3-ae95b9312451",
-            "colId": "a1c8a8a1-e7a1-4133-9ea4-70be3e55b242",
+            "_id": "60a385eb-a2b5-4770-945a-1252af801f91",
+            "colId": "81056b85-1b10-4e5b-ba58-e67efdf4ed14",
             "containerId": "",
             "name": "signUp",
             "url": "http://localhost:8080/proyectoBim/v1/auth/signUp",
             "method": "POST",
             "sortNum": 5000,
-            "created": "2024-03-05T22:16:05.641Z",
-            "modified": "2024-03-05T22:16:05.641Z",
+            "created": "2024-03-06T04:29:46.058Z",
+            "modified": "2024-03-06T04:29:46.058Z",
             "headers": [],
             "params": [],
             "body": {
@@ -25,15 +25,15 @@
             "tests": []
         },
         {
-            "_id": "60fe9938-60d2-4d7d-b111-bae81498404c",
-            "colId": "a1c8a8a1-e7a1-4133-9ea4-70be3e55b242",
+            "_id": "17792023-dc5c-42b0-b888-1ad72302dbc3",
+            "colId": "81056b85-1b10-4e5b-ba58-e67efdf4ed14",
             "containerId": "",
             "name": "login",
             "url": "http://localhost:8080/proyectoBim/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T22:16:05.640Z",
-            "modified": "2024-03-05T22:16:05.640Z",
+            "created": "2024-03-06T04:29:46.057Z",
+            "modified": "2024-03-06T04:29:46.057Z",
             "headers": [],
             "params": [],
             "body": {
