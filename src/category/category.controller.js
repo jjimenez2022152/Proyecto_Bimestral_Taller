@@ -81,29 +81,30 @@ export const categoryPut = async (req, res) => {
 };
 
 export const categoryDelete = async (req, res) => {
-    try {
+    const { id } = req.params;
 
-        const {id: categoriaId} = req.params;
-        // Verifica si la categoría existe
-        const categoria = await Category.findById(categoriaId);
-        if (!categoria) {
-            throw new Error('La categoría no existe');
+    try {
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        // Encuentra la categoría predeterminada (puedes cambiar este ID según tu configuración)
-        const categoriaPredeterminada = await Category.findOne({ name: 'Producto Comercial' });
+        const category = await Category.findByIdAndUpdate(id, { name: "Default Product", description: "A default product", estado: false });
 
-        // Actualiza los productos asociados a la categoría que se va a eliminar
-        await Producto.updateMany({ category: categoriaId }, { category: categoriaPredeterminada._id });
+        if (!category) {
+            return res.status(404).json({ msg: 'Category no encontrada' });
+        }
 
-        // Elimina la categoría
-        const categoryDeleted = await Category.findByIdAndDelete(categoriaId);
+        const usuarioAutenticado = req.usuario;
 
         res.status(200).json({
-            category: categoryDeleted
-        })
+            msg: 'Este catrgoria fue elimana:',
+            category,
+            usuarioAutenticado
+        });
     } catch (error) {
-        console.error('Error al eliminar categoría:', error);
-        res.status(500).json({ error: 'Error al eliminar la categoria' });
+        console.error(error);
+        res.status(500).json({ msg: 'Server error' });
     }
 };
