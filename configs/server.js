@@ -44,14 +44,14 @@ class Server {
         adminUser.save()
         
 
-        const lenghtCategory = await Category.countDocuments()
+        /*const lenghtCategory = await Category.countDocuments()
         if (lenghtCategory > 0 ) return;
 
         const categoryDefault = new Category(
             { name: "Producto Comercial"}
         )
 
-        categoryDefault.save()
+        categoryDefault.save()*/
 
     }
 

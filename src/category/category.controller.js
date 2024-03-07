@@ -90,7 +90,7 @@ export const categoryDelete = async (req, res) => {
             return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
         }
 
-        const category = await Category.findByIdAndUpdate(id, { name: "Default Product", description: "A default product", estado: false });
+        const category = await Category.findByIdAndUpdate(id, { name: "Producto Comercial", description: "A default product", estado: false });
 
         if (!category) {
             return res.status(404).json({ msg: 'Category no encontrada' });
