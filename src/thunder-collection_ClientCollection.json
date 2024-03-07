@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ClientCollection",
-    "dateExported": "2024-03-07T07:40:46.733Z",
+    "dateExported": "2024-03-07T08:31:48.943Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -19,6 +19,26 @@
                 {
                     "name": "x-token",
                     "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NTRlNDhhOTFjYmFmNDdhZGQ2MzUiLCJpYXQiOjE3MDk3OTU2NjgsImV4cCI6MTcwOTc5OTI2OH0.7CgDIy_gC2kN-6qbbotodfKIARcrEjOSFDAN1rWWSgw"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "9bf07088-52e4-4209-95f1-906057059e05",
+            "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
+            "containerId": "",
+            "name": "Productos por nombre",
+            "url": "http://localhost:8080/proyectoBim/v1/product/buscar",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-07T08:09:13.829Z",
+            "modified": "2024-03-07T08:14:02.206Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
                 }
             ],
             "params": [],

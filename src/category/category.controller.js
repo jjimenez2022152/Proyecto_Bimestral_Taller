@@ -1,5 +1,6 @@
 import bcryptjs from 'bcryptjs';
 import Category from '../category/category.model.js';
+import Product from '../product/product.model.js'
 import User from '../users/user.model.js';
 
 
@@ -56,7 +57,7 @@ export const categoryPost = async (req, res) => {
 export const categoryPut = async (req, res) => {
     try {
         const { id } = req.params;
-        const { name } = req.body; // Solo se requiere el nombre de la categoría
+        const { name } = req.body; 
 
         const usuario = req.usuario;
 
@@ -108,3 +109,29 @@ export const categoryDelete = async (req, res) => {
         res.status(500).json({ msg: 'Server error' });
     }
 };
+
+export const getCategoryById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const usuario = req.usuario;
+
+        if (usuario.role !== 'ADMIN_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+        }
+
+        const categoryFound = await Category.findOne({ _id: id });
+
+        if (!categoryFound) {
+            return res.status(404).json({ error: 'Categoría no encontrada' });
+        }
+
+        res.status(200).json({ categoria: categoryFound });
+    } catch (error) {
+        console.error('Error al obtener categoría por ID:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
+
+
+

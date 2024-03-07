@@ -251,3 +251,20 @@ export const getProductoByNameC = async (req, res) => {
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
+
+export const getProductsByCategoryId = async (req, res) => {
+    const { categoryId } = req.query;
+
+    try {
+        const products = await Product.find({ 'category': categoryId });
+
+        if (!products || products.length === 0) {
+            return res.status(404).json({ error: 'No se encontraron productos asociados a esta categoría' });
+        }
+
+        res.status(200).json(products);
+    } catch (error) {
+        console.error('Error al obtener productos por categoría:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
