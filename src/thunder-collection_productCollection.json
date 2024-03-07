@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-07T05:04:16.554Z",
+    "dateExported": "2024-03-07T06:09:55.271Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "9cc7db1b-cf4d-44ce-a592-b877882bd7a5",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "b3ef2aca-71a6-4e9c-88e4-36884315973d",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "productPost",
             "url": "http://localhost:8080/proyectoBim/v1/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-06T04:29:46.078Z",
-            "modified": "2024-03-07T05:00:59.980Z",
+            "created": "2024-03-07T05:37:39.509Z",
+            "modified": "2024-03-07T05:37:39.509Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -27,23 +27,22 @@
                 "raw": "{\n \"name\":\"Samsung A5\",\n \"description\": \"Telefono inteligente\",\n \"price\": 220.3,\n \"stock\": 12,\n \"categoryId\": \"65e9497b45494ecd55d750f8\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "f61bf006-4576-4597-b997-b5098e567932",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "0a857423-57dc-4971-849a-601ebc681457",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "productGet",
             "url": "http://localhost:8080/proyectoBim/v1/product/allProducts",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-06T04:29:46.079Z",
-            "modified": "2024-03-07T04:58:45.062Z",
+            "created": "2024-03-07T05:37:39.510Z",
+            "modified": "2024-03-07T06:02:01.382Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTEzMTIsImV4cCI6MTcwOTc5NDkxMn0.Gx3F5xPLpmz-FjBllyjmZ9tw0qV4nLpPU_ik7SwNVWU"
                 }
             ],
             "params": [],
@@ -51,15 +50,15 @@
             "tests": []
         },
         {
-            "_id": "94b61333-806b-4700-9b0a-5bde036be863",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "9961744a-937e-4133-9a67-2e9d44626600",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "productPut",
             "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-06T04:47:41.794Z",
-            "modified": "2024-03-06T05:03:51.142Z",
+            "created": "2024-03-07T05:37:39.511Z",
+            "modified": "2024-03-07T05:37:39.511Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -75,15 +74,15 @@
             "tests": []
         },
         {
-            "_id": "4a3e62ce-a738-4e18-aa02-8ff1592dfd11",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "98f277bf-cfc3-4bcd-abc3-707129f54570",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "productGetById",
             "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2024-03-06T05:15:21.787Z",
-            "modified": "2024-03-06T05:15:54.491Z",
+            "created": "2024-03-07T05:37:39.512Z",
+            "modified": "2024-03-07T05:37:39.512Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -91,19 +90,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "28c91fc1-58d2-4eaf-bcfb-008f3a4f7cf7",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "7037c579-6130-47ba-a493-e21e823a1f30",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "productDelete",
             "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-06T05:25:08.067Z",
-            "modified": "2024-03-06T05:25:32.141Z",
+            "created": "2024-03-07T05:37:39.513Z",
+            "modified": "2024-03-07T05:37:39.513Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -114,15 +112,15 @@
             "tests": []
         },
         {
-            "_id": "92d17f31-278d-42a1-9a46-bd563bf4893f",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "aff4b775-7c70-4681-877e-04b573151d83",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "ProductosAgotados",
             "url": "http://localhost:8080/proyectoBim/v1/product/",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2024-03-06T06:01:43.638Z",
-            "modified": "2024-03-06T06:18:45.196Z",
+            "created": "2024-03-07T05:37:39.514Z",
+            "modified": "2024-03-07T05:37:39.514Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -130,19 +128,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "550fb0b6-5c5b-4678-b201-4095551d281e",
-            "colId": "49030db7-247b-41c1-951e-51288d3e0bf3",
+            "_id": "26b83917-048e-40ce-9d98-62026aa2ff35",
+            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
             "containerId": "",
             "name": "Productos Mas Vendidos",
             "url": "http://localhost:8080/proyectoBim/v1/product/masVendidos",
             "method": "GET",
             "sortNum": 70000,
-            "created": "2024-03-06T06:35:24.514Z",
-            "modified": "2024-03-06T06:36:26.318Z",
+            "created": "2024-03-07T05:37:39.515Z",
+            "modified": "2024-03-07T05:37:39.515Z",
             "headers": [
                 {
                     "name": "x-token",

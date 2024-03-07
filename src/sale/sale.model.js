@@ -10,7 +10,15 @@ const saleSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "users",
         required: true,
-    }
+    },
+    cantidad: {
+        type: Number,
+        required: true
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+    },
 });
 
 saleSchema.methods.toJSON = function() {

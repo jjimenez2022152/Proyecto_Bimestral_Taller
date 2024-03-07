@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-03-07T05:04:07.402Z",
+    "dateExported": "2024-03-07T06:09:58.855Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "4eceaf18-8353-4b1f-a1f4-b39d80f692ae",
-            "colId": "bcf79dc0-e81f-48b8-9f02-bbea52b330dc",
+            "_id": "90dc6af8-133c-43a3-9af4-b6ba3162a8b0",
+            "colId": "06e3aa7d-6e52-44c8-b2c9-5fe13a4044c2",
             "containerId": "",
             "name": "userPost",
             "url": "http://localhost:8080/proyectoBim/v1/users",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-06T04:29:46.088Z",
-            "modified": "2024-03-06T04:29:46.088Z",
+            "created": "2024-03-07T05:37:39.520Z",
+            "modified": "2024-03-07T05:37:39.520Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -30,15 +30,15 @@
             "tests": []
         },
         {
-            "_id": "685a1116-daa2-4a1b-bc09-37e1c62e6b8b",
-            "colId": "bcf79dc0-e81f-48b8-9f02-bbea52b330dc",
+            "_id": "2080b3f8-9db2-4162-a163-9c8c3c5fff44",
+            "colId": "06e3aa7d-6e52-44c8-b2c9-5fe13a4044c2",
             "containerId": "",
             "name": "userGet",
             "url": "http://localhost:8080/proyectoBim/v1/users",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-06T04:29:46.089Z",
-            "modified": "2024-03-06T04:29:46.089Z",
+            "created": "2024-03-07T05:37:39.521Z",
+            "modified": "2024-03-07T05:37:39.521Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -49,15 +49,15 @@
             "tests": []
         },
         {
-            "_id": "13e0a879-13f9-45c9-91a5-60b8005efe6b",
-            "colId": "bcf79dc0-e81f-48b8-9f02-bbea52b330dc",
+            "_id": "e110c8d6-cf25-4dcc-9421-a849f4580203",
+            "colId": "06e3aa7d-6e52-44c8-b2c9-5fe13a4044c2",
             "containerId": "",
             "name": "userGetById",
             "url": "http://localhost:8080/proyectoBim/v1/users/65e67379ba7507f22899a8a1",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-06T04:29:46.090Z",
-            "modified": "2024-03-06T04:29:46.090Z",
+            "created": "2024-03-07T05:37:39.522Z",
+            "modified": "2024-03-07T05:37:39.522Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -68,15 +68,15 @@
             "tests": []
         },
         {
-            "_id": "670c811d-e90f-42cf-93d3-5f8266f070b5",
-            "colId": "bcf79dc0-e81f-48b8-9f02-bbea52b330dc",
+            "_id": "59787bac-7080-45d2-9d95-1341f2d9ce94",
+            "colId": "06e3aa7d-6e52-44c8-b2c9-5fe13a4044c2",
             "containerId": "",
             "name": "userPut",
             "url": "http://localhost:8080/proyectoBim/v1/users/65e673a4ba7507f22899a8a4",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-06T04:29:46.091Z",
-            "modified": "2024-03-06T04:29:46.091Z",
+            "created": "2024-03-07T05:37:39.523Z",
+            "modified": "2024-03-07T05:37:39.523Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -92,15 +92,15 @@
             "tests": []
         },
         {
-            "_id": "693f73a4-1ec2-448b-b452-bcbcaf186e81",
-            "colId": "bcf79dc0-e81f-48b8-9f02-bbea52b330dc",
+            "_id": "3bcf8c12-3bef-4582-a365-8b4f36e2371b",
+            "colId": "06e3aa7d-6e52-44c8-b2c9-5fe13a4044c2",
             "containerId": "",
             "name": "userDelete",
             "url": "http://localhost:8080/proyectoBim/v1/users/65e7964e338072e426e4f65c",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-06T04:29:46.092Z",
-            "modified": "2024-03-06T04:29:46.092Z",
+            "created": "2024-03-07T05:37:39.524Z",
+            "modified": "2024-03-07T05:37:39.524Z",
             "headers": [
                 {
                     "name": "x-token",
