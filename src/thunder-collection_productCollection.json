@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-07T06:09:55.271Z",
+    "dateExported": "2024-03-07T07:40:34.109Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -38,11 +38,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-07T05:37:39.510Z",
-            "modified": "2024-03-07T06:02:01.382Z",
+            "modified": "2024-03-07T07:38:28.385Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTEzMTIsImV4cCI6MTcwOTc5NDkxMn0.Gx3F5xPLpmz-FjBllyjmZ9tw0qV4nLpPU_ik7SwNVWU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTcwOTMsImV4cCI6MTcwOTgwMDY5M30.1IOxeuJP3adZJPEoSODAdBBiuhy0z6DNkGyc_lFIDl4"
                 }
             ],
             "params": [],
@@ -82,14 +82,15 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-03-07T05:37:39.512Z",
-            "modified": "2024-03-07T05:37:39.512Z",
+            "modified": "2024-03-07T07:38:33.846Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDIxNDksImV4cCI6MTcwOTcwNTc0OX0.gCcef2d_Om-FqTJ2Iv3KUjg3LZCGs2_gHIOKnEFEHLQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTcwOTMsImV4cCI6MTcwOTgwMDY5M30.1IOxeuJP3adZJPEoSODAdBBiuhy0z6DNkGyc_lFIDl4"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
@@ -120,14 +121,15 @@
             "method": "GET",
             "sortNum": 60000,
             "created": "2024-03-07T05:37:39.514Z",
-            "modified": "2024-03-07T05:37:39.514Z",
+            "modified": "2024-03-07T07:38:41.686Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDQ2NzEsImV4cCI6MTcwOTcwODI3MX0.DdZEAkhsgsKtt4ohEzIAdH7EgywAughCHPO_1J9NrVM"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTcwOTMsImV4cCI6MTcwOTgwMDY5M30.1IOxeuJP3adZJPEoSODAdBBiuhy0z6DNkGyc_lFIDl4"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
@@ -139,14 +141,15 @@
             "method": "GET",
             "sortNum": 70000,
             "created": "2024-03-07T05:37:39.515Z",
-            "modified": "2024-03-07T05:37:39.515Z",
+            "modified": "2024-03-07T07:39:56.595Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDY5NzIsImV4cCI6MTcwOTcxMDU3Mn0.BJzU3690dLNvSIUmDAhnPuaInkVKJwwmyaD-72Wo_FA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTcwOTMsImV4cCI6MTcwOTgwMDY5M30.1IOxeuJP3adZJPEoSODAdBBiuhy0z6DNkGyc_lFIDl4"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         }
     ]

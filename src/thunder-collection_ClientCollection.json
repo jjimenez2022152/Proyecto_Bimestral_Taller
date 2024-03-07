@@ -1,0 +1,29 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ClientCollection",
+    "dateExported": "2024-03-07T07:40:46.733Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "68174acc-d6ff-44d8-a8e8-080453ba160d",
+            "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
+            "containerId": "",
+            "name": "Productos Mas Vendidos Copy",
+            "url": "http://localhost:8080/proyectoBim/v1/product/masVendidoClientes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-07T06:55:43.901Z",
+            "modified": "2024-03-07T07:14:36.376Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NTRlNDhhOTFjYmFmNDdhZGQ2MzUiLCJpYXQiOjE3MDk3OTU2NjgsImV4cCI6MTcwOTc5OTI2OH0.7CgDIy_gC2kN-6qbbotodfKIARcrEjOSFDAN1rWWSgw"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

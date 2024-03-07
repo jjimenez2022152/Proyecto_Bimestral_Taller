@@ -13,42 +13,33 @@ export const salePost = async (req, res) => {
 
         const { product: productName, cantidad } = req.body;
 
-        // Verificar si el producto existe por su nombre
         const product = await Product.findOne({ name: productName });
         if (!product) {
             return res.status(404).json({ error: 'Producto no encontrado' });
         }
 
-        // Verificar si hay suficiente stock
         if (product.stock < cantidad) {
             return res.status(400).json({ error: 'No hay suficiente stock disponible' });
         }
 
-        // Crear nueva venta
         const nuevaVenta = new Sale({
             product: product._id,
-            user: usuario.id, // Asignar automáticamente el ID de usuario desde el token JWT
+            user: usuario.id, 
             cantidad
         });
 
-        // Guardar la venta en la base de datos
         await nuevaVenta.save();
 
-        // Actualizar el stock del producto
         product.stock -= cantidad;
         await product.save();
 
-        // Obtener la descripción del producto
         const descripcionProducto = product.description;
 
-        // Obtener el correo del usuario que realiza la compra
         const usuarioCompra = await User.findById(usuario.id);
         const correoUsuarioCompra = usuarioCompra.correo;
 
-        // Obtener el nombre del producto
         const nombreProducto = product.name;
 
-        // Incluir todos los datos en la respuesta
         const ventaData = {
             message: 'Compra exitosa',
             _id: nuevaVenta._id,
