@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoryCollection",
-    "dateExported": "2024-03-06T06:51:27.842Z",
+    "dateExported": "2024-03-07T05:04:11.882Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T04:29:46.067Z",
-            "modified": "2024-03-06T04:31:51.046Z",
+            "modified": "2024-03-07T05:02:36.532Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Electronica\"\n}",
+                "raw": "{\n  \"name\": \"Hogar\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,11 +39,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T04:29:46.068Z",
-            "modified": "2024-03-06T04:33:12.610Z",
+            "modified": "2024-03-07T04:59:05.415Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
                 }
             ],
             "params": [],
@@ -80,15 +80,15 @@
             "colId": "817853f5-343f-451a-836d-be323b4de31b",
             "containerId": "",
             "name": "categotyDelete",
-            "url": "http://localhost:8080/proyectoBim/v1/category/65e7841f94af78825a5a45bb",
+            "url": "http://localhost:8080/proyectoBim/v1/category/65e9497545494ecd55d750f4",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2024-03-06T04:29:46.070Z",
-            "modified": "2024-03-06T04:33:44.685Z",
+            "modified": "2024-03-07T05:02:14.088Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk2OTk0NjEsImV4cCI6MTcwOTcwMzA2MX0.wTU6vvGXK5VydcdpP_l2pS3IY4cOtSpikTLXN4Vmak4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
                 }
             ],
             "params": [],

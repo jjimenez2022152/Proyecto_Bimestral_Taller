@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-06T06:51:32.090Z",
+    "dateExported": "2024-03-07T05:04:16.554Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T04:29:46.078Z",
-            "modified": "2024-03-06T06:45:26.891Z",
+            "modified": "2024-03-07T05:00:59.980Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDQ2NzEsImV4cCI6MTcwOTcwODI3MX0.DdZEAkhsgsKtt4ohEzIAdH7EgywAughCHPO_1J9NrVM"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"name\":\"Pachon\",\n \"description\": \"Pachon de 8 litros\",\n \"price\": 50,\n \"stock\": 5,\n \"categoryId\": \"65e7f19403d7f3ac0e1356b2\"\n}",
+                "raw": "{\n \"name\":\"Samsung A5\",\n \"description\": \"Telefono inteligente\",\n \"price\": 220.3,\n \"stock\": 12,\n \"categoryId\": \"65e9497b45494ecd55d750f8\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,11 +39,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T04:29:46.079Z",
-            "modified": "2024-03-06T06:39:34.249Z",
+            "modified": "2024-03-07T04:58:45.062Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjE3NTAzZDdmM2FjMGUxMzU2YTgiLCJpYXQiOjE3MDk3MDY5NzIsImV4cCI6MTcwOTcxMDU3Mn0.BJzU3690dLNvSIUmDAhnPuaInkVKJwwmyaD-72Wo_FA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
                 }
             ],
             "params": [],
