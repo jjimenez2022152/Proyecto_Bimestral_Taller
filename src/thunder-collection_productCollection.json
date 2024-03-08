@@ -1,45 +1,45 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-08T07:16:21.232Z",
+    "dateExported": "2024-03-08T08:42:50.798Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "b3ef2aca-71a6-4e9c-88e4-36884315973d",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "beefa0eb-1cc3-466b-90b0-98959f365916",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "productPost",
             "url": "http://localhost:8080/proyectoBim/v1/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T05:37:39.509Z",
-            "modified": "2024-03-07T08:38:52.596Z",
+            "created": "2024-03-08T08:26:22.538Z",
+            "modified": "2024-03-08T08:40:16.579Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4MDAxODAsImV4cCI6MTcwOTgwMzc4MH0.kKbic6QeGkEDkD6Sl34f7b342XiK0th7D4gR04xAEN0"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4ODcxNDUsImV4cCI6MTcwOTg5MDc0NX0.cBHLH4qvfmX0QeaMMXfeBKkk45Np14MbACHV9GsKLUE"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"name\":\"Almohada\",\n \"description\": \"Almohada linda\",\n \"price\": 10.30,\n \"stock\": 9,\n \"categoryId\": \"65e9496a45494ecd55d750f0\"\n}",
+                "raw": "{\n \"name\":\"Detergente\",\n \"description\": \"Detergente de ropa negra\",\n \"price\": 80,\n \"stock\": 9,\n \"categoryId\": \"65eacec68de2b6a8865b8d22\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "0a857423-57dc-4971-849a-601ebc681457",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "441a1b5b-bebe-4f67-a0b2-b34242405b59",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "productGet",
             "url": "http://localhost:8080/proyectoBim/v1/product/allProducts",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-07T05:37:39.510Z",
-            "modified": "2024-03-08T05:27:02.467Z",
+            "created": "2024-03-08T08:26:22.539Z",
+            "modified": "2024-03-08T08:26:22.539Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -47,19 +47,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "9961744a-937e-4133-9a67-2e9d44626600",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "2955ed7b-bef8-488e-a0df-bd8aa5a3aeda",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "productPut",
             "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-07T05:37:39.511Z",
-            "modified": "2024-03-07T05:37:39.511Z",
+            "created": "2024-03-08T08:26:22.540Z",
+            "modified": "2024-03-08T08:26:22.540Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -75,15 +74,15 @@
             "tests": []
         },
         {
-            "_id": "98f277bf-cfc3-4bcd-abc3-707129f54570",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "968d3cf0-15bb-4c3b-ab71-e5d6839f1c86",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "productGetById",
             "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2024-03-07T05:37:39.512Z",
-            "modified": "2024-03-07T07:38:33.846Z",
+            "created": "2024-03-08T08:26:22.541Z",
+            "modified": "2024-03-08T08:26:22.541Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -91,19 +90,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "7037c579-6130-47ba-a493-e21e823a1f30",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "03c90a83-6bc9-434e-8fd9-6541c53ec4f9",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "productDelete",
             "url": "http://localhost:8080/proyectoBim/v1/product/65e7f2f503d7f3ac0e1356d8",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-07T05:37:39.513Z",
-            "modified": "2024-03-07T05:37:39.513Z",
+            "created": "2024-03-08T08:26:22.542Z",
+            "modified": "2024-03-08T08:26:22.542Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -114,15 +112,15 @@
             "tests": []
         },
         {
-            "_id": "aff4b775-7c70-4681-877e-04b573151d83",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "badbb3cb-642c-402c-b982-e213536b4c77",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "ProductosAgotados",
             "url": "http://localhost:8080/proyectoBim/v1/product/",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2024-03-07T05:37:39.514Z",
-            "modified": "2024-03-07T07:38:41.686Z",
+            "created": "2024-03-08T08:26:22.543Z",
+            "modified": "2024-03-08T08:26:22.543Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -130,19 +128,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "26b83917-048e-40ce-9d98-62026aa2ff35",
-            "colId": "61ac15b7-e92d-4871-b80a-b9d8132e8cee",
+            "_id": "c78d39b2-974e-44f9-9314-2c780014b68e",
+            "colId": "71c2f450-1e34-4085-9d76-d3c57b0b128d",
             "containerId": "",
             "name": "Productos Mas Vendidos",
             "url": "http://localhost:8080/proyectoBim/v1/product/masVendidos",
             "method": "GET",
             "sortNum": 70000,
-            "created": "2024-03-07T05:37:39.515Z",
-            "modified": "2024-03-07T07:39:56.595Z",
+            "created": "2024-03-08T08:26:22.544Z",
+            "modified": "2024-03-08T08:26:22.544Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -150,7 +147,6 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         }
     ]

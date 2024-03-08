@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-08T07:16:12.472Z",
+    "dateExported": "2024-03-08T08:42:29.782Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "d780c9a5-838e-47d5-9375-caee6bdf152a",
-            "colId": "7127c866-6aa3-403e-ac23-53b3935e7c4e",
+            "_id": "cda816ec-dd34-4ba3-8188-ca0ac2b096e8",
+            "colId": "7f66853f-4f3c-435e-a573-799a0e3b9e8c",
             "containerId": "",
             "name": "signUp",
             "url": "http://localhost:8080/proyectoBim/v1/auth/signUp",
             "method": "POST",
             "sortNum": 5000,
-            "created": "2024-03-07T05:37:39.489Z",
-            "modified": "2024-03-08T07:12:35.551Z",
+            "created": "2024-03-08T08:26:22.494Z",
+            "modified": "2024-03-08T08:26:22.494Z",
             "headers": [],
             "params": [],
             "body": {
@@ -22,19 +22,18 @@
                 "raw": "{\n  \"nombre\": \"Cliente 6\",\n  \"correo\": \"client6@gmail.com\",\n  \"password\": \"123456\",\n  \"informacion\": \"Yo soy el cliente 6\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "aed658d7-dc5c-4400-b9b8-60113a81d97f",
-            "colId": "7127c866-6aa3-403e-ac23-53b3935e7c4e",
+            "_id": "3abcf8b9-c27e-4636-ae16-ba41ac2f823f",
+            "colId": "7f66853f-4f3c-435e-a573-799a0e3b9e8c",
             "containerId": "",
             "name": "login",
             "url": "http://localhost:8080/proyectoBim/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T05:37:39.487Z",
-            "modified": "2024-03-08T07:14:19.999Z",
+            "created": "2024-03-08T08:26:22.493Z",
+            "modified": "2024-03-08T08:39:05.682Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -44,7 +43,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\":\"client6@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "raw": "{\n  \"correo\":\"admin@gmail.com\",\n  \"password\":\"123456\"\n}",
                 "form": []
             },
             "reqType": "post",

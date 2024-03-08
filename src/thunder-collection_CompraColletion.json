@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "CompraColletion",
-    "dateExported": "2024-03-08T08:06:13.147Z",
+    "dateExported": "2024-03-08T08:43:00.030Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "f85ec4c1-d21f-4425-ac8c-d83ac59d3f5d",
-            "colId": "fa80b9ee-bf77-402b-bec5-46af0f1a0c4e",
+            "_id": "cbfdc0ea-c1c4-41a1-93be-bd579dc919b9",
+            "colId": "c855884d-7c7c-4ba7-9e1e-58ef52ddb0f6",
             "containerId": "",
             "name": "compraClientePost",
             "url": "http://localhost:8080/proyectoBim/v1/sale",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T05:42:03.828Z",
-            "modified": "2024-03-07T06:03:00.071Z",
+            "created": "2024-03-08T08:26:22.527Z",
+            "modified": "2024-03-08T08:26:22.527Z",
             "headers": [
                 {
                     "name": "x-token",
