@@ -66,12 +66,10 @@ export const usuariosDeleteClientes = async (req, res) => {
     const { id } = req.params;
     const usuario = req.usuario;
 
-    // Verificar si el role del usuario es CLIENT_ROLE
     if (usuario.role !== 'CLIENT_ROLE') {
       return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
     }
 
-    // Verificar que el correo del usuario del token sea el mismo que el correo del usuario a eliminar
     const usuarioEliminar = await Usuario.findById(id);
     if (!usuarioEliminar) {
       return res.status(404).json({ error: 'Usuario no encontrado' });
@@ -89,6 +87,48 @@ export const usuariosDeleteClientes = async (req, res) => {
     res.status(200).json({ msg: 'Usuario eliminado', usuario: usuarioEliminado });
   } catch (error) {
     console.error('Error al eliminar usuario:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+};
+
+export const usuarioPropioPut = async (req, res = response) => {
+  try {
+    const { id } = req.params;
+    const { _id, password, google, correo, ...resto } = req.body;
+
+    const usuario = req.usuario;
+
+    if (usuario.role !== 'CLIENT_ROLE') {
+      return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+    }
+
+    const usuarioActualizar = await Usuario.findById(id);
+    if (!usuarioActualizar) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+    if (usuario.correo !== usuarioActualizar.correo) {
+      return res.status(403).json({ error: 'Acceso denegado. No tiene permisos para actualizar este usuario.' });
+    }
+
+    if (password) {
+      const salt = bcryptjs.genSaltSync();
+      resto.password = bcryptjs.hashSync(password, salt);
+    }
+
+    await Usuario.findByIdAndUpdate(id, resto);
+
+    const usuarioActualizado = await Usuario.findOne({ _id: id });
+
+    if (!usuarioActualizado) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+
+    res.status(200).json({
+      msg: 'Usuario actualizado',
+      usuario: usuarioActualizado
+    });
+  } catch (error) {
+    console.error('Error al actualizar usuario:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
 };

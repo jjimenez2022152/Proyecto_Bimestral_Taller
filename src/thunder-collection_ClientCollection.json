@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ClientCollection",
-    "dateExported": "2024-03-08T06:45:32.068Z",
+    "dateExported": "2024-03-08T07:16:30.456Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -115,13 +115,23 @@
             "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
             "containerId": "",
             "name": "Actualizar Informacion",
-            "url": "",
+            "url": "http://localhost:8080/proyectoBim/v1/auth/65eaba638134cfd3036a7207",
             "method": "PUT",
             "sortNum": 70000,
             "created": "2024-03-08T06:42:46.833Z",
-            "modified": "2024-03-08T06:42:49.690Z",
-            "headers": [],
+            "modified": "2024-03-08T07:14:32.591Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhYmE2MzgxMzRjZmQzMDM2YTcyMDciLCJpYXQiOjE3MDk4ODIwNTksImV4cCI6MTcwOTg4NTY1OX0.6geP4vBDexHgp1dOScfp--kW_Azh5u-FwAGm1POXepk"
+                }
+            ],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Cesar Palacios\",\n  \"informacion\": \"Mi nombre es Cesar Palacios perro\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

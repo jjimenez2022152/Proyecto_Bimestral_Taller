@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 
-import { login, signUp, usuariosDeleteClientes } from "./auth.controller.js";
+import { login, signUp, usuariosDeleteClientes, usuarioPropioPut } from "./auth.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { existenteEmail } from "../helpers/db-validators.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
@@ -40,6 +40,17 @@ router.delete(
         check("id").custom(existeUsuarioById),
     ],usuariosDeleteClientes
 
-)
+);
+
+router.put(
+    "/:id",
+    [
+      validarJWT,
+      check("id", "No es un ID válido").isMongoId(),
+      check("id").custom(existeUsuarioById),
+      validarCampos,
+    ],
+    usuarioPropioPut
+  );
 
 export default router
