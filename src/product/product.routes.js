@@ -7,15 +7,14 @@ import { existeProductoById } from "../helpers/db-validators.js";
 
 //import { tieneRole } from "../middlewares/validar-roles.js";
 import { productPost, productPut, productGet, getProductById, productDelete, 
-  productAgotadoGet, productoMasVendido, productoMasVendidoClient, getProductoByNameC, getProductsByCategoryId  } from "./product.controller.js"; 
+  productAgotadoGet, productoMasVendido, productoMasVendidoClient, ProductosPorCategoria  } from "./product.controller.js"; 
 const router = Router();
 
 
 router.get("/allProducts", validarJWT, productGet);
 router.get("/masVendidos", validarJWT, productoMasVendido);
 router.get("/masVendidoClientes", validarJWT, productoMasVendidoClient);
-router.post('/productosPorCategoria', validarJWT, getProductsByCategoryId);
-router.get("/buscar", getProductoByNameC);
+router.get("/categoria/:categoria", ProductosPorCategoria);
 
 router.post(
   "/", 

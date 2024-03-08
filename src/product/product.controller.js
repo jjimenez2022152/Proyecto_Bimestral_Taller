@@ -2,7 +2,7 @@ import { response, request } from "express";
 import User from '../users/user.model.js';
 import bcryptjs from 'bcryptjs';
 import Product from '../product/product.model.js'
-
+import Category from '../category/category.model.js'
 
 export const productGet = async (req, res) => {
     const { limite, desde } = req.query;
@@ -230,41 +230,23 @@ export const productoMasVendidoClient = async (req, res) => {
     }
 };
 
-export const getProductoByNameC = async (req, res) => {
-    try {
-        const { name } = req.body; // Obtener el nombre del producto del cuerpo de la solicitud
-        const usuario = req.usuario;
-        
-        if (usuario.role !== 'CLIENT_ROLE') {
-            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.XD' });
-        }
 
-        const productoEncontrado = await Product.findOne({ name }).populate('category');
 
-        if (!productoEncontrado) {
-            return res.status(404).json({ error: 'Producto no encontrado' });
-        }
-
-        res.status(200).json({ producto: productoEncontrado });
-    } catch (error) {
-        console.error('Error al obtener producto por nombre:', error);
-        res.status(500).json({ error: 'Error interno del servidor' });
-    }
-};
-
-export const getProductsByCategoryId = async (req, res) => {
-    const { categoryId } = req.query;
+export const ProductosPorCategoria = async (req, res) => {
+    const { categoria } = req.params;
 
     try {
-        const products = await Product.find({ 'category': categoryId });
+        const categoriaEncontrada = await Category.findOne({ name: categoria });
 
-        if (!products || products.length === 0) {
-            return res.status(404).json({ error: 'No se encontraron productos asociados a esta categoría' });
+        if (!categoriaEncontrada) {
+            return res.status(404).json({ error: 'Categoría no encontrada' });
         }
 
-        res.status(200).json(products);
+        const productos = await Product.find({ category: categoriaEncontrada._id });
+
+        res.status(200).json(productos);
     } catch (error) {
-        console.error('Error al obtener productos por categoría:', error);
-        res.status(500).json({ error: 'Error interno del servidor' });
+        console.error('Error al obtener el catálogo de productos por categoría:', error);
+        res.status(500).json({ error: 'Error al obtener el catálogo de productos por categoría' });
     }
 };
