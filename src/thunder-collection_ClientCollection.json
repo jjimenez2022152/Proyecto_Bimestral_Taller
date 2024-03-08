@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ClientCollection",
-    "dateExported": "2024-03-07T08:31:48.943Z",
+    "dateExported": "2024-03-08T05:32:28.965Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,11 +14,11 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-03-07T06:55:43.901Z",
-            "modified": "2024-03-07T07:14:36.376Z",
+            "modified": "2024-03-08T05:26:48.475Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NTRlNDhhOTFjYmFmNDdhZGQ2MzUiLCJpYXQiOjE3MDk3OTU2NjgsImV4cCI6MTcwOTc5OTI2OH0.7CgDIy_gC2kN-6qbbotodfKIARcrEjOSFDAN1rWWSgw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4NzU1MDAsImV4cCI6MTcwOTg3OTEwMH0.F2gRX77gDXnw3elqI1iCdg0Pb_1ewBb8vIExlnhTgu4"
                 }
             ],
             "params": [],
@@ -30,15 +30,41 @@
             "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
             "containerId": "",
             "name": "Productos por nombre",
-            "url": "http://localhost:8080/proyectoBim/v1/product/buscar",
+            "url": "http://localhost:8080/proyectoBim/v1/product/byName?nombre=Sillon",
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-03-07T08:09:13.829Z",
-            "modified": "2024-03-07T08:14:02.206Z",
+            "modified": "2024-03-08T05:27:48.875Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": ""
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4NzQzMjEsImV4cCI6MTcwOTg3NzkyMX0.0w7lyL-f_fNvLfnK_m_SPYw2DJk-mEjgk_wHOtRPDvY"
+                }
+            ],
+            "params": [
+                {
+                    "name": "nombre",
+                    "value": "Sillon",
+                    "isPath": false
+                }
+            ],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "4041cce5-f39c-4e82-acae-b925b0a78ecb",
+            "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
+            "containerId": "",
+            "name": "PorductosBy Categoria",
+            "url": "http://localhost:8080/proyectoBim/v1/product/categoria/Hogar",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-08T02:23:31.691Z",
+            "modified": "2024-03-08T02:26:36.700Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4NjQ2NjcsImV4cCI6MTcwOTg2ODI2N30.UGm3458rUgAnivOGmqIERD8qqKv4VoIu3mggWGKg7WA"
                 }
             ],
             "params": [],

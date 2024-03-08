@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-07T08:31:36.063Z",
+    "dateExported": "2024-03-08T05:32:14.181Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,19 +14,20 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-07T05:37:39.509Z",
-            "modified": "2024-03-07T05:37:39.509Z",
+            "modified": "2024-03-07T08:38:52.596Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3ODc0ODYsImV4cCI6MTcwOTc5MTA4Nn0.Rqr3COROalPa8R1p4J2XZ52oEvZvztZoEd4utGUXvig"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4MDAxODAsImV4cCI6MTcwOTgwMzc4MH0.kKbic6QeGkEDkD6Sl34f7b342XiK0th7D4gR04xAEN0"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"name\":\"Samsung A5\",\n \"description\": \"Telefono inteligente\",\n \"price\": 220.3,\n \"stock\": 12,\n \"categoryId\": \"65e9497b45494ecd55d750f8\"\n}",
+                "raw": "{\n \"name\":\"Almohada\",\n \"description\": \"Almohada linda\",\n \"price\": 10.30,\n \"stock\": 9,\n \"categoryId\": \"65e9496a45494ecd55d750f0\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -38,11 +39,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-07T05:37:39.510Z",
-            "modified": "2024-03-07T07:38:28.385Z",
+            "modified": "2024-03-08T05:27:02.467Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk3OTcwOTMsImV4cCI6MTcwOTgwMDY5M30.1IOxeuJP3adZJPEoSODAdBBiuhy0z6DNkGyc_lFIDl4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4NzU1MDAsImV4cCI6MTcwOTg3OTEwMH0.F2gRX77gDXnw3elqI1iCdg0Pb_1ewBb8vIExlnhTgu4"
                 }
             ],
             "params": [],

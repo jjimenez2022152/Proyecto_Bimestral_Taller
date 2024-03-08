@@ -6,40 +6,50 @@ import { existeNombreProducto } from "../helpers/db-validators.js";
 import { existeProductoById } from "../helpers/db-validators.js";
 
 //import { tieneRole } from "../middlewares/validar-roles.js";
-import { productPost, productPut, productGet, getProductById, productDelete, 
-  productAgotadoGet, productoMasVendido, productoMasVendidoClient, ProductosPorCategoria  } from "./product.controller.js"; 
+import {
+  productPost,
+  productPut,
+  productGet, 
+  getProductById, 
+  productDelete,
+  productAgotadoGet, 
+  productoMasVendido, 
+  productoMasVendidoClient, 
+  ProductosPorCategoria, 
+  ProductosPorNombre
+} from "./product.controller.js";
 const router = Router();
 
-
+router.get("/byName", ProductosPorNombre);
 router.get("/allProducts", validarJWT, productGet);
 router.get("/masVendidos", validarJWT, productoMasVendido);
 router.get("/masVendidoClientes", validarJWT, productoMasVendidoClient);
 router.get("/categoria/:categoria", ProductosPorCategoria);
 
 router.post(
-  "/", 
+  "/",
   [
-    validarJWT, 
+    validarJWT,
     check("name", "El nombre es obligatorio").not().isEmpty(),
-    check("name" ,"Producto con nombre ya registrado").custom(existeNombreProducto),
+    check("name", "Producto con nombre ya registrado").custom(existeNombreProducto),
     check("description", "La descripcion es obligatoria").not().isEmpty(),
     check("price", "El precio es de caracter obligatorio").not().isEmpty(),
     check("stock", "El stock es obligatorio").not().isEmpty(),
     check("categoryId", "La cartegoria es obligatoria").not().isEmpty(),
-    validarCampos, 
+    validarCampos,
   ],
-  productPost 
+  productPost
 );
 
 router.put(
-  "/:id", 
+  "/:id",
   [
-    validarJWT, 
+    validarJWT,
     check("id", "No es un ID válido").isMongoId(),
     check("id").custom(existeProductoById),
-    validarCampos, 
+    validarCampos,
   ],
-  productPut 
+  productPut
 );
 
 router.get(

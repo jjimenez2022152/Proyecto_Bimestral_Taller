@@ -250,3 +250,16 @@ export const ProductosPorCategoria = async (req, res) => {
         res.status(500).json({ error: 'Error al obtener el catálogo de productos por categoría' });
     }
 };
+
+export const ProductosPorNombre = async (req, res) => {
+    const { nombre } = req.query;
+
+    try {
+        const productos = await Product.find({ name: { $regex: new RegExp(nombre, 'i') } });
+
+        res.status(200).json(productos);
+    } catch (error) {
+        console.error('Error al buscar productos por nombre:', error);
+        res.status(500).json({ error: 'Error al buscar productos por nombre' });
+    }
+};
