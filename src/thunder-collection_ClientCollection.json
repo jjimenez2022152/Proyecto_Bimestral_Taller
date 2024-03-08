@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ClientCollection",
-    "dateExported": "2024-03-08T05:32:28.965Z",
+    "dateExported": "2024-03-08T06:45:32.068Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -69,6 +69,59 @@
             ],
             "params": [],
             "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b7846002-8a7c-426b-9510-2d46bd4bd4ba",
+            "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
+            "containerId": "",
+            "name": "productGet Copy",
+            "url": "http://localhost:8080/proyectoBim/v1/product/allProducts",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-08T06:14:06.596Z",
+            "modified": "2024-03-08T06:14:06.596Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4NzU1MDAsImV4cCI6MTcwOTg3OTEwMH0.F2gRX77gDXnw3elqI1iCdg0Pb_1ewBb8vIExlnhTgu4"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "33884a5d-1e47-4fd8-a978-1d365cabc490",
+            "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
+            "containerId": "",
+            "name": "Eliminar cuenta propia",
+            "url": "http://localhost:8080/proyectoBim/v1/auth/65eab2fac57d7b5e59680680",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-08T06:20:09.245Z",
+            "modified": "2024-03-08T06:42:07.929Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhYjJmYWM1N2Q3YjVlNTk2ODA2ODAiLCJpYXQiOjE3MDk4ODAwNzUsImV4cCI6MTcwOTg4MzY3NX0.9nQ3cEP9_yqZejQPkhrvTlouXxSExYUSK-FtV6Ih-k8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fac6482a-fb8f-41ac-827b-1bdb649c5ece",
+            "colId": "3c5bd865-d010-4f3c-8e3d-65463b9b9b81",
+            "containerId": "",
+            "name": "Actualizar Informacion",
+            "url": "",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-03-08T06:42:46.833Z",
+            "modified": "2024-03-08T06:42:49.690Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-08T05:31:58.005Z",
+    "dateExported": "2024-03-08T06:45:16.004Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,14 +14,15 @@
             "method": "POST",
             "sortNum": 5000,
             "created": "2024-03-07T05:37:39.489Z",
-            "modified": "2024-03-07T05:37:39.489Z",
+            "modified": "2024-03-08T06:40:58.481Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Cliente 1\",\n  \"correo\": \"client1@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"nombre\": \"Cliente 5\",\n  \"correo\": \"client5@gmail.com\",\n  \"password\": \"123456\",\n  \"informacion\": \"Yo soy el cliente 5\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -33,7 +34,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-07T05:37:39.487Z",
-            "modified": "2024-03-08T05:05:21.611Z",
+            "modified": "2024-03-08T06:41:15.650Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -43,7 +44,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\":\"admin@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "raw": "{\n  \"correo\":\"client5@gmail.com\",\n  \"password\":\"123456\"\n}",
                 "form": []
             },
             "reqType": "post",

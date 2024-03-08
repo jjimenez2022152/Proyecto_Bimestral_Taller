@@ -44,10 +44,12 @@ export const login = async (req, res) => {
   }
 }
 
+
+// ----------Clientes
 export const signUp = async (req, res) => {
 
-  const { nombre, correo, password } = req.body;
-  const usuario = new Usuario({ nombre, correo, password });
+  const { nombre, correo, password, informacion } = req.body;
+  const usuario = new Usuario({ nombre, correo, password, informacion });
 
   const salt = bcryptjs.genSaltSync();
   usuario.password = bcryptjs.hashSync(password, salt);
@@ -58,3 +60,35 @@ export const signUp = async (req, res) => {
     usuario
   });
 }
+
+export const usuariosDeleteClientes = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const usuario = req.usuario;
+
+    // Verificar si el role del usuario es CLIENT_ROLE
+    if (usuario.role !== 'CLIENT_ROLE') {
+      return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.' });
+    }
+
+    // Verificar que el correo del usuario del token sea el mismo que el correo del usuario a eliminar
+    const usuarioEliminar = await Usuario.findById(id);
+    if (!usuarioEliminar) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+    if (usuario.correo !== usuarioEliminar.correo) {
+      return res.status(403).json({ error: 'Acceso denegado. No tiene permisos para eliminar este usuario.' });
+    }
+
+    const usuarioEliminado = await Usuario.findByIdAndUpdate(id, { estado: false });
+
+    if (!usuarioEliminado) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+
+    res.status(200).json({ msg: 'Usuario eliminado', usuario: usuarioEliminado });
+  } catch (error) {
+    console.error('Error al eliminar usuario:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+};

@@ -9,12 +9,13 @@ export const productGet = async (req, res) => {
     const query = { estado: true };
 
     try {
+        /*
         const usuario = req.usuario;
 
-        if (usuario.role !== 'ADMIN_ROLE') {
-            return res.status(403).json({ error: 'Acceso denegado. El usuario no tiene permisos para realizar esta función.NM' });
+        if (usuario.role !== 'ADMIN_ROLE', 'CLIENT_ROLE') {
+            return res.status(403).json({ error: 'Acceso denegado.' });
         }
-
+*/
         const [total, productos] = await Promise.all([
             Product.countDocuments(query),
             Product.find(query)

@@ -27,6 +27,9 @@ const UserSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  informacion: {
+    type: String,
+  },
   google: {
     type: Boolean,
     default: true,
