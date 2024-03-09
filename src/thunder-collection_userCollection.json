@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-03-08T08:42:33.926Z",
+    "dateExported": "2024-03-09T03:47:40.381Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -53,18 +53,19 @@
             "colId": "43de135f-df3b-4b4a-9cda-78abe7e1972f",
             "containerId": "",
             "name": "userGetById",
-            "url": "http://localhost:8080/proyectoBim/v1/users/65e67379ba7507f22899a8a1",
+            "url": "http://localhost:8080/proyectoBim/v1/users/65eaba638134cfd3036a7207",
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-03-08T08:26:22.551Z",
-            "modified": "2024-03-08T08:26:22.551Z",
+            "modified": "2024-03-09T01:54:20.682Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NzM3OWJhNzUwN2YyMjg5OWE4YTEiLCJpYXQiOjE3MDk2MDI3MTUsImV4cCI6MTcwOTYwNjMxNX0.VL-12hfppam4IkrrAQzhv6r65NUJcFdceXAAOmFWTTA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk5NDkyNTAsImV4cCI6MTcwOTk1Mjg1MH0.yfTnitPqBu_HNeWezNIsCQRAWV07otVzsbBdLI8Cwhk"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {

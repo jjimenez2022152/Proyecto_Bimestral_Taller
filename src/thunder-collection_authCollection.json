@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "authCollection",
-    "dateExported": "2024-03-08T08:42:29.782Z",
+    "dateExported": "2024-03-09T03:47:24.333Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -33,7 +33,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-08T08:26:22.493Z",
-            "modified": "2024-03-08T08:39:05.682Z",
+            "modified": "2024-03-09T03:25:45.960Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -43,7 +43,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\":\"admin@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "raw": "{\n  \"correo\":\"client2@gmail.com\",\n  \"password\":\"123456\"\n}",
                 "form": []
             },
             "reqType": "post",

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "carritoCollection",
-    "dateExported": "2024-03-08T08:43:03.878Z",
+    "dateExported": "2024-03-09T03:48:04.333Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,20 +14,60 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-08T08:26:43.873Z",
-            "modified": "2024-03-08T08:40:41.774Z",
+            "modified": "2024-03-09T03:25:56.661Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5NDk1NjQ1NDk0ZWNkNTVkNzUwZTkiLCJpYXQiOjE3MDk4ODcxNDUsImV4cCI6MTcwOTg5MDc0NX0.cBHLH4qvfmX0QeaMMXfeBKkk45Np14MbACHV9GsKLUE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhYWI2ZTUzMjU4YmY4ZmZlNzc1OTIiLCJpYXQiOjE3MDk5NTQ3NDUsImV4cCI6MTcwOTk1ODM0NX0.LHqh1GajcqoG0HlyfQ-t3C7YUfjj1aDFKo2ayhXJeeA"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"nombreProducto\": \"Detergente\",\n    \"cantidad\": 1\n}",
+                "raw": "{\n    \"nombreProducto\": \"Gorra\",\n    \"cantidad\": 1\n}",
                 "form": []
             },
             "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "9236b1a3-ac1d-4f80-a131-70b35d4b4eeb",
+            "colId": "dad6499a-f9e9-4f96-aa08-ecaa002a5c99",
+            "containerId": "",
+            "name": "getCarrito",
+            "url": "http://localhost:8080/proyectoBim/v1/carrito/miCarrito",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-09T01:48:06.382Z",
+            "modified": "2024-03-09T03:26:05.354Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhYWI2ZTUzMjU4YmY4ZmZlNzc1OTIiLCJpYXQiOjE3MDk5NTQ3NDUsImV4cCI6MTcwOTk1ODM0NX0.LHqh1GajcqoG0HlyfQ-t3C7YUfjj1aDFKo2ayhXJeeA"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "2b139f81-a792-4a99-adc4-cf546ba90340",
+            "colId": "dad6499a-f9e9-4f96-aa08-ecaa002a5c99",
+            "containerId": "",
+            "name": "Vaciar Carrito",
+            "url": "http://localhost:8080/proyectoBim/v1/carrito/VaciarCarrito",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-03-09T02:38:10.680Z",
+            "modified": "2024-03-09T03:26:17.679Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhYWI2ZTUzMjU4YmY4ZmZlNzc1OTIiLCJpYXQiOjE3MDk5NTQ3NDUsImV4cCI6MTcwOTk1ODM0NX0.LHqh1GajcqoG0HlyfQ-t3C7YUfjj1aDFKo2ayhXJeeA"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

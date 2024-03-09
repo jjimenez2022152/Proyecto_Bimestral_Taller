@@ -4,7 +4,8 @@ import { validarJWT } from "../middlewares/validar-jwt.js";
 
 import {
     carritoPost,
-    getCarrito
+    getCarrito,
+    deleteCarrito,
 } from '../carrito/carrito.controller.js'
 
 const router = Router();
@@ -20,5 +21,7 @@ router.post(
     ],
     carritoPost
 );
+
+router.delete("/VaciarCarrito", validarJWT, deleteCarrito);
 
 export default router;
