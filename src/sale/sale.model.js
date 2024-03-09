@@ -26,5 +26,5 @@ saleSchema.methods.toJSON = function() {
     return saleData;
 };
 
-export default mongoose.model('sale', saleSchema);     
+export default mongoose.model('sales', saleSchema);     
 

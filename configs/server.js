@@ -11,6 +11,7 @@ import categoryRoutes from '../src/category/category.routes.js';
 import productRoutes from '../src/product/product.routes.js';
 import saleRoutes from '../src/sale/sale.routes.js';
 import carritoRoutes from '../src/carrito/carrito.routes.js';
+import facturaRoutes from '../src/factura/factura.routes.js';
 
 import User from "../src/users/user.model.js";
 import Category from '../src/category/category.model.js';
@@ -26,6 +27,7 @@ class Server {
         this.productPath = '/proyectoBim/v1/product';
         this.salePath = '/proyectoBim/v1/sale';
         this.carritoPath = '/proyectoBim/v1/carrito';
+        this.facturaPath = '/proyectoBim/v1/factura';
 
         this.middlewares();
         this.conectarDB();
@@ -73,6 +75,7 @@ class Server {
         this.app.use(this.productPath, productRoutes);
         this.app.use(this.salePath, saleRoutes);
         this.app.use(this.carritoPath, carritoRoutes);
+        this.app.use(this.facturaPath, facturaRoutes);
     }
 
     listen() {

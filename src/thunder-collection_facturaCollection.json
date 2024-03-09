@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "facturaCollection",
+    "dateExported": "2024-03-09T04:31:35.535Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e0ecbf91-1cce-4e89-84b7-58983b9ef574",
+            "colId": "f6fb1973-f2a2-4313-a149-efec1f10b469",
+            "containerId": "",
+            "name": "facturaPost",
+            "url": "http://localhost:8080/proyectoBim/v1/factura",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T04:04:32.900Z",
+            "modified": "2024-03-09T04:21:39.639Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhYWI2ZTUzMjU4YmY4ZmZlNzc1OTIiLCJpYXQiOjE3MDk5NTcxNTYsImV4cCI6MTcwOTk2MDc1Nn0.Y7chS37yg2oEqLG4BUVS6cDrdVmoIoltIaiuBvsoLg8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"idCompra\": \"65ebe3cd4ceb39aa1cf5b908\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
