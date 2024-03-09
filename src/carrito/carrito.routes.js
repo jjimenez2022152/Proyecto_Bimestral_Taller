@@ -3,10 +3,13 @@ import { check } from "express-validator";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 
 import {
-    carritoPost
+    carritoPost,
+    getCarrito
 } from '../carrito/carrito.controller.js'
 
 const router = Router();
+
+router.get("/miCarrito", validarJWT, getCarrito);
 
 router.post(
     "/",

@@ -12,7 +12,6 @@ export const carritoPost = async (req, res) => {
     const usuario = req.usuario;
 
     try {
-        // Verificar el rol del usuario
         if (usuario.role !== 'CLIENT_ROLE') {
             return res.status(403).json({ error: 'Acceso denegado. El Admin no tiene permisos para realizar esta función.' });
         }
@@ -63,3 +62,35 @@ export const carritoPost = async (req, res) => {
     }
 };
 
+export const getCarrito = async (req, res) => {
+    const usuarioId = req.usuario._id;
+
+    try {
+        const carrito = await Carrito.findOne({ user: usuarioId }).populate('productos');
+
+        if (!carrito) {
+            return res.status(404).json({ msg: 'No se encontró ningún producto en el carrito' });
+        }
+
+        let precioTotal = 0;
+        const productosEnCarrito = carrito.productos.map(producto => {
+            const subtotal = producto.precio * producto.cantidad;
+            precioTotal += subtotal;
+
+            return {
+                usuario: req.usuario.nombre,
+                producto: producto.nombreProducto,
+                cantidad: producto.cantidad,
+                precio: producto.precio,
+                subtotal: subtotal
+            };
+        });
+
+        const carritoId = carrito._id;
+
+        return res.status(200).json({ carritoId, productosEnCarrito, precioTotal });
+    } catch (error) {
+        console.error('Error al obtener los productos en el carrito:', error);
+        res.status(500).json({ error: 'Error al obtener los productos en el carrito' });
+    }
+};
